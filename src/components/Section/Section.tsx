@@ -36,7 +36,7 @@ const Content = ({ variant = "brand", children }: SectionContentProps) => {
         black: "bg-[#000] text-white"
     }
 
-    return <div className={`bg-brand p-5 h-[374px] ${variantsClasses[variant]}`}>
+    return <div className={`p-5 h-[374px] ${variantsClasses[variant]}`}>
         <>
             {children}
         </>
