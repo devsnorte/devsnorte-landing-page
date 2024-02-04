@@ -1,0 +1,34 @@
+@tailwind utilities;
+
+.text {
+  opacity: 0;
+  animation: text 3s ease-in-out 0.5s forwards;
+  @apply text-center relative bottom-4 font-light;
+}
+
+@keyframes text {
+  10% {
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.line {
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: line-animation 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes line-animation {
+  to {
+    transform: scaleX(1);
+  }
+}
