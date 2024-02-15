@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  -webkit-font-smoothing: antialiased;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;

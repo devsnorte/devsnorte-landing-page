@@ -1,19 +1,20 @@
 import Image from "next/image"
 import css from "./style.module.css"
+import IconStar from "/public/icons/star.svg"
 
 const ImageHero = () => {
     return (
       <div className="relative">
         <Image
-          src="/icons/star.svg"
+          src={IconStar}
           width={30}
           height={30}
-          alt="star"
+          alt="Icon star"
           className="absolute -right-8 -top-4"
         />
         <svg
           width="700"
-          height="50"
+          height="100"
           viewBox="0 0 700 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
