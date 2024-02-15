@@ -1,6 +1,6 @@
 const Detail = () => {
   return (
-    <div className="w-10 h-80 absolute -bottom-24 left-0 bg-brand"></div>
+    <div className=" absolute bg-brand w-4 lg:w-10 h-28 lg:h-80  detail-hero -bottom-5 lg:-bottom-24 left-0 "></div>
   );
 };
 

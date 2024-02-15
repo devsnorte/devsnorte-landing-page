@@ -13,6 +13,9 @@ const config: Config = {
       },
       colors: {
         brand: '#5ED29E'
+      },
+      maxWidth: {
+      
       }
     }
   },
