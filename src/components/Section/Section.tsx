@@ -1,4 +1,10 @@
+"use client";
 import NextImage from "next/image";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface TitleProps {
   children: React.ReactNode;
@@ -24,11 +30,80 @@ interface SectionContainerContentProps {
 }
 
 const Title = ({ children }: TitleProps) => {
-  return <h2 className="lg:text-6xl font-semibold">{children}</h2>;
+  const textRef = useRef(null);
+  const triggerRef = useRef(null);
+
+  useEffect(() => {
+    const Trigger = gsap.fromTo(
+      textRef.current,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: 1,
+          markers: false,
+          onUpdate: ({ progress }) => {
+            console.log(progress);
+          },
+        },
+      }
+    );
+    return () => {
+      Trigger.kill();
+    };
+  }, []);
+  return (
+    <h2 className="lg:text-6xl font-semibold" ref={textRef}>
+      {children}
+    </h2>
+  );
 };
 
 const Info = ({ children }: TextProps) => {
-  return <p className="mt-6 font-poppins">{children}</p>;
+  const textRef = useRef(null);
+  const triggerRef = useRef(null);
+
+  useEffect(() => {
+    const Trigger = gsap.fromTo(
+      textRef.current,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: 1,
+          markers: false,
+          onUpdate: ({ progress }) => {
+            console.log(progress);
+          },
+        },
+      }
+    );
+    return () => {
+      Trigger.kill();
+    };
+  }, []);
+
+  return (
+    <p className="mt-2 font-poppins" ref={textRef}>
+      {children}
+    </p>
+  );
 };
 
 const Content = ({ variant = "brand", children }: SectionContentProps) => {
@@ -63,15 +138,79 @@ const Image = ({
 };
 
 const Container = ({ children }: SectionContainerProps) => {
+  const textRef = useRef(null);
+  const triggerRef = useRef(null);
+
+  useEffect(() => {
+    const Trigger = gsap.fromTo(
+      textRef.current,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: 1,
+          markers: false,
+          onUpdate: ({ progress }) => {
+            console.log(progress);
+          },
+        },
+      }
+    );
+    return () => {
+      Trigger.kill();
+    };
+  }, []);
+
   return (
-    <section className="max-h-[835px] w-full max-sm:flex-wrap flex flex-row-reverse">
+    <section
+      ref={triggerRef}
+      className="max-h-[835px] w-full max-sm:flex-wrap flex flex-row-reverse"
+    >
       {children}
     </section>
   );
 };
 
 const ContainerContent = ({ children }: SectionContainerContentProps) => {
-  return <div className="max-w-96 h-1/2 flex lg:pt-48">{children}</div>;
+   const textRef = useRef(null);
+   const triggerRef = useRef(null);
+
+   useEffect(() => {
+     const Trigger = gsap.fromTo(
+       textRef.current,
+       {
+         opacity: 0,
+         y: 50,
+       },
+       {
+         duration: 1,
+         opacity: 1,
+         y: 0,
+         scrollTrigger: {
+           trigger: triggerRef.current,
+           start: "top center",
+           end: "bottom center",
+           scrub: 1,
+           markers: false,
+           onUpdate: ({ progress }) => {
+             console.log(progress);
+           },
+         },
+       }
+     );
+     return () => {
+       Trigger.kill();
+     };
+   }, []);
+  return <div className="max-w-96 h-1/2 flex lg:pt-48" ref={triggerRef}>{children}</div>;
 };
 
 const Section = {
