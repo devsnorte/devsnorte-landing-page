@@ -2,7 +2,7 @@ export function Burguer () {
   return (
     <div>
       <svg
-        width="60"
+        width="70"
         height="70"
         viewBox="0 0 60 60"
         fill="none"
