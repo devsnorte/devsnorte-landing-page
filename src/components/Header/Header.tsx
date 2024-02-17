@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MenuIcon from "../MenuIcon/MenuIcon";
 
 interface HeaderProps extends React.HTMLAttributes<HTMLElement> {}
 
@@ -25,13 +26,7 @@ const Header = ({ className = "", ...rest }: HeaderProps) => {
         </Link>
 
         <div className="hover:pointer">
-          <Image
-            src="/icons/menu.svg"
-            width={60}
-            height={60}
-            alt="menu"
-            className="w-full xl:w-14"
-          />
+          <MenuIcon/>
         </div>
       </div>
     </header>

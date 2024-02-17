@@ -138,40 +138,40 @@ const Image = ({
 };
 
 const Container = ({ children }: SectionContainerProps) => {
-  const textRef = useRef(null);
-  const triggerRef = useRef(null);
+  // const textRef = useRef(null);
+  // const triggerRef = useRef(null);
 
-  useEffect(() => {
-    const Trigger = gsap.fromTo(
-      textRef.current,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        duration: 1,
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top center",
-          end: "bottom center",
-          scrub: 1,
-          markers: false,
-          onUpdate: ({ progress }) => {
-            console.log(progress);
-          },
-        },
-      }
-    );
-    return () => {
-      Trigger.kill();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const Trigger = gsap.fromTo(
+  //     textRef.current,
+  //     {
+  //       opacity: 0,
+  //       y: 50,
+  //     },
+  //     {
+  //       duration: 1,
+  //       opacity: 1,
+  //       y: 0,
+  //       scrollTrigger: {
+  //         trigger: triggerRef.current,
+  //         start: "top center",
+  //         end: "bottom center",
+  //         scrub: 1,
+  //         markers: false,
+  //         onUpdate: ({ progress }) => {
+  //           console.log(progress);
+  //         },
+  //       },
+  //     }
+  //   );
+  //   return () => {
+  //     Trigger.kill();
+  //   };
+  // }, []);
 
   return (
     <section
-      ref={triggerRef}
+      // ref={triggerRef}
       className="max-h-[835px] w-full max-sm:flex-wrap flex flex-row-reverse"
     >
       {children}
@@ -180,37 +180,43 @@ const Container = ({ children }: SectionContainerProps) => {
 };
 
 const ContainerContent = ({ children }: SectionContainerContentProps) => {
-   const textRef = useRef(null);
-   const triggerRef = useRef(null);
+  //  const textRef = useRef(null);
+  //  const triggerRef = useRef(null);
 
-   useEffect(() => {
-     const Trigger = gsap.fromTo(
-       textRef.current,
-       {
-         opacity: 0,
-         y: 50,
-       },
-       {
-         duration: 1,
-         opacity: 1,
-         y: 0,
-         scrollTrigger: {
-           trigger: triggerRef.current,
-           start: "top center",
-           end: "bottom center",
-           scrub: 1,
-           markers: false,
-           onUpdate: ({ progress }) => {
-             console.log(progress);
-           },
-         },
-       }
-     );
-     return () => {
-       Trigger.kill();
-     };
-   }, []);
-  return <div className="max-w-96 h-1/2 flex lg:pt-48" ref={triggerRef}>{children}</div>;
+  //  useEffect(() => {
+  //    const Trigger = gsap.fromTo(
+  //      textRef.current,
+  //      {
+  //        opacity: 0,
+  //        y: 50,
+  //      },
+  //      {
+  //        duration: 1,
+  //        opacity: 1,
+  //        y: 0,
+  //        scrollTrigger: {
+  //          trigger: triggerRef.current,
+  //          start: "top center",
+  //          end: "bottom center",
+  //          scrub: 1,
+  //          markers: false,
+  //          onUpdate: ({ progress }) => {
+  //            console.log(progress);
+  //          },
+  //        },
+  //      }
+  //    );
+  //    return () => {
+  //      Trigger.kill();
+  //    };
+  //  }, []);
+  return (
+    <div
+      // ref={triggerRef}
+      className="max-w-96 h-1/2 flex lg:pt-48">
+      {children}
+    </div>
+  );
 };
 
 const Section = {
