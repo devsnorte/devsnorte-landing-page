@@ -5,7 +5,7 @@ import SectionPrincipal from "@/components/Section/Section";
 
 const Home = () => {
   return (
-    <main>
+    <main className="overflow-hidden">
       <Header />
       <Hero />
       <SectionPrincipal />
