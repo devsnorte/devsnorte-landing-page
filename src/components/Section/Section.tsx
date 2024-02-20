@@ -239,7 +239,7 @@ useEffect(() => {
           service: '/v4/search',
           params: {
             only: 'name,images,location,start_date_formats,end_date_formats,url',
-            organizer_id: 3125215,
+            organizer_id: 5478152,
             sort: 'date',
             order_by: 'desc',
             limit: '3',
