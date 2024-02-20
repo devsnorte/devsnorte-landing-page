@@ -353,44 +353,6 @@ useEffect(() => {
       </Section.Container>
 
       <Section.Container>
-        <Section.Image src="/images/eventos.png" alt="Eventos Sympla" />
-        <Section.Content variant="black">
-          <Section.Title>Próximos Eventos</Section.Title>
-          <div className="pt-5">
-            <svg
-              width="157"
-              height="1"
-              viewBox="0 0 157 1"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="4.37114e-08"
-                y1="0.5"
-                x2="157"
-                y2="0.500014"
-                stroke="#EEEEEE"
-              />
-            </svg>
-          </div>
-            {events.length === 0 ?<div>Ops! Parece que não há eventos disponíveis no momento. Volte mais tarde para verificar novos eventos!</div>: <EventList events={events} />}
-            
-    
-          <div className="absolute bottom-10 -right-5 z-10">
-            <svg
-              width="118"
-              height="158"
-              viewBox="0 0 118 158"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="118" height="158" fill="#41B883" />
-            </svg>
-          </div>
-        </Section.Content>
-      </Section.Container>
-
-      <Section.Container>
         <Section.Image src="/images/sorteios.png" alt="Imagem de Sorteios" />
         <Section.Content variant="brand">
           <Section.Title>Sorteios</Section.Title>
@@ -421,6 +383,44 @@ useEffect(() => {
               recursos.
             </Section.Info>
           </Section.ContainerContent>
+          <div className="absolute bottom-10 -right-5 z-10">
+            <svg
+              width="118"
+              height="158"
+              viewBox="0 0 118 158"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="118" height="158" fill="#41B883" />
+            </svg>
+          </div>
+        </Section.Content>
+      </Section.Container>
+
+      <Section.Container>
+        <Section.Image src="/images/eventos.png" alt="Eventos Sympla" />
+        <Section.Content variant="black">
+          <Section.Title>Próximos Eventos</Section.Title>
+          <div className="pt-5">
+            <svg
+              width="157"
+              height="1"
+              viewBox="0 0 157 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="4.37114e-08"
+                y1="0.5"
+                x2="157"
+                y2="0.500014"
+                stroke="#EEEEEE"
+              />
+            </svg>
+          </div>
+            {events.length === 0 ?<div>Ops! Parece que não há eventos disponíveis no momento. Volte mais tarde para verificar novos eventos!</div>: <EventList events={events} />}
+            
+    
           <div className="absolute bottom-10 -right-5 z-10">
             <svg
               width="118"
