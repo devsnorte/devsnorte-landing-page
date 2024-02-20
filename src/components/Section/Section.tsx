@@ -353,7 +353,7 @@ useEffect(() => {
       </Section.Container>
 
       <Section.Container>
-        <Section.Image src="/images/sorteios.png" alt="Imagem de Sorteios" />
+        <Section.Image src="/images/eventos.png" alt="Eventos Sympla" />
         <Section.Content variant="black">
           <Section.Title>Próximos Eventos</Section.Title>
           <div className="pt-5">
