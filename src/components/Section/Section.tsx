@@ -236,7 +236,7 @@ useEffect(() => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          service: '/v4/events/past',
+          service: '/v4/search',
           params: {
             only: 'name,images,location,start_date_formats,end_date_formats,url',
             organizer_id: 3125215,
