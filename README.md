@@ -1,40 +1,141 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Landing Page - Comunidade Devs Norte
 
-## Design
+![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
 
-[Link para o protótipo](https://www.figma.com/file/eenBVFzu17zB259Xw6OUwu/Devs-Norte---Site-Redesign?type=design&node-id=31%3A173&mode=design&t=WJTjULmKOs3K9chc-1)
+Bem-vindo à Landing Page da Comunidade Devs Norte! Aqui você encontrará informações sobre nossa comunidade, eventos, recursos e muito mais.
 
-## Getting Started
+## Sobre Nós
 
-First, run the development server:
+A Comunidade Devs Norte é uma plataforma online dedicada a reunir desenvolvedores de software do Norte do Brasil. Nosso objetivo é promover a colaboração, o aprendizado e o networking entre profissionais de tecnologia da região.
+
+## Recursos
+
+- **Eventos**: Fique por dentro dos próximos eventos da comunidade, incluindo meetups, workshops, webinars e hackathons.
+
+- **Recursos**: Descubra uma variedade de recursos úteis para desenvolvedores, como tutoriais, cursos, ferramentas e bibliotecas.
+
+- **Fórum**: Participe de discussões, faça perguntas, compartilhe conhecimento e obtenha suporte em nosso fórum dedicado.
+
+## Tecnologias Utilizadas
+
+Este site foi desenvolvido utilizando o framework Next.js versão 14, uma poderosa ferramenta para construção de aplicações web modernas e otimizadas.
+
+## Deploy
+
+O site está disponível para visualização em [devsnorte.netlify.app](https://devsnorte.netlify.app/).
+
+## Como Instalar
+
+Para instalar e rodar o projeto localmente, siga estes passos:
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/suaconta/nome-do-repositorio.git
+```
+
+2. Acesse o diretório do projeto:
+
+```bash
+cd nome-do-repositorio
+```
+
+3. Instale as dependências:
+
+```bash
+npm install
+# ou
+yarn install
+```
+
+## Como Rodar
+
+Para iniciar o servidor de desenvolvimento, utilize o seguinte comando:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Layout
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O layout do site está disponível no Figma para visualização e contribuições. Você pode acessá-lo [aqui](https://www.figma.com/file/eenBVFzu17zB259Xw6OUwu/Devs-Norte---Site-Redesign?type=design&node-id=31%3A173&mode=design&t=WJTjULmKOs3K9chc-1).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contribuições
 
-## Learn More
+Adoramos contribuições! Se você quiser contribuir para o projeto, siga estas etapas:
 
-To learn more about Next.js, take a look at the following resources:
+1. Verifique as [issues abertas](https://github.com/suaconta/nome-do-repositorio/issues) para ver se há algo em que possa ajudar.
+2. Se encontrar uma issue que gostaria de resolver, comente nela para que possamos atribuí-la a você.
+3. Depois de receber a atribuição, faça um fork do repositório, faça suas alterações e envie um pull request.
+4. Certifique-se de descrever claramente suas alterações no pull request e vincule a issue correspondente.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Como Fazer Commit
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para padronizar as mensagens de commit, recomendamos o uso da ferramenta `git-cz` em conjunto com a padronização Conventional Commits. Siga os passos abaixo para utilizá-la:
 
-## Deploy on Vercel
+1. Certifique-se de estar no diretório do projeto.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Execute o seguinte comando para fazer um commit:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run commit
+```
+
+# Contribuidores
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/iago-a-cavalcante/">
+        <img src="https://avatars.githubusercontent.com/u/5131187?v=4" width="100px;" alt="Iago Cavalcante"/><br>
+        <sub>
+          <b>Iago Cavalcante</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/daywison-s-ab11b6121/">
+        <img src="https://avatars.githubusercontent.com/DaywisonSilva" width="100px;" alt="Lubien"/><br>
+        <sub>
+          <b>Daywison Silva</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/suamirochadev/">
+        <img src="https://avatars.githubusercontent.com/suamirochadev" width="100px;" alt="Lubien"/><br>
+        <sub>
+          <b>Suami Rocha</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/edsncostadev/">
+        <img src="https://avatars.githubusercontent.com/ecsistem" width="100px;" alt="Lubien"/><br>
+        <sub>
+          <b>Edson Costa</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+## Contato
+
+Para mais informações ou dúvidas, entre em contato conosco ou siga-nos nas redes sociais:
+
+- Twitter: [@devsnorte](https://twitter.com/devsnorte)
+- Instagram: [@devsnorte](https://instagram.com/devsnorte)
+- YouTube: [Devs Norte](https://www.youtube.com/c/DevsNorte)
+
+Estamos ansiosos para conhecer você e tornar nossa comunidade ainda mais incrível juntos! 🚀
+
+## Licença
+
+Este projeto é licenciado sob os termos da [Licença MIT](LICENSE.md).
+
+## Código de Conduta
+
+Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entender nossas diretrizes de comportamento e as medidas a serem tomadas em caso de violação.
