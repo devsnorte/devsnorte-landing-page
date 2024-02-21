@@ -10,10 +10,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "commit" : "git-cz"
+    "commit": "git-cz"
   },
   "dependencies": {
     "@types/gsap": "^3.0.0",
+    "classnames": "^2.5.1",
     "gsap": "^3.12.5",
     "next": "14.1.0",
     "react": "^18",

@@ -1,6 +1,6 @@
-import Gallery from "@/components/Gallery"
+import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero"
+import Hero from "@/components/Hero";
 import SectionPrincipal from "@/components/Section/Section";
 
 const Home = () => {
@@ -12,6 +12,6 @@ const Home = () => {
       <Gallery />
     </main>
   );
-}
+};
 
-export default Home
+export default Home;
