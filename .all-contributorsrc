@@ -51,7 +51,16 @@
       "profile": "https://bento.me/suamirochadev",
       "contributions": [
         "code"
-      ] 
+      ]
+    },
+    {
+      "login": "juanrtalmeida",
+      "name": "Juan Rodrigues Teixeira Almeida ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75220133?v=4",
+      "profile": "https://github.com/juanrtalmeida",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
