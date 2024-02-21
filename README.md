@@ -29,6 +29,31 @@ Este site foi desenvolvido utilizando o framework Next.js versão 14, uma podero
 
 O site está disponível para visualização em [devsnorte.netlify.app](https://devsnorte.netlify.app/).
 
+## O que é necessário antes da instalação
+
+Você precisa ter o Node.js e o NPM (Node Package Manager) instalados para rodar a aplicação.
+
+### Instalação Linux
+No terminal, rode os seguintes comandos: 
+```bash
+sudo apt update
+sudo apt install nodejs
+```
+
+### Instalação Windows
+Instale a versão mais recente no link a seguir:
+```bash
+https://nodejs.org/en/download/
+```
+Ele já instala o NPM junto com o Node.js.
+
+### Para verificar se a instalação deu certo, rode:
+```bash
+node --version
+npm --version
+```
+Devem aparecer as versões do Node.js e do npm na sua linha de comando.
+
 ## Como Instalar
 
 Para instalar e rodar o projeto localmente, siga estes passos:
