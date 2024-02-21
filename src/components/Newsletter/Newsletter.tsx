@@ -1,7 +1,4 @@
- 
-import Section from "../Section"
-
-const Newsletter = () =>  {
+ const Newsletter = () =>  {
   return (
 <div className="mx-auto lg:w-6/12 mb-4 p-4 z-50">
   <div className="flex items-center">
