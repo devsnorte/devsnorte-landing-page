@@ -53,6 +53,21 @@ export const useLandingPageInfos = () => {
         </p>
       ),
     },
+
+    {
+      image: {
+        url: "/images/sorteios.png",
+        alt: "Imagem de Palestra",
+      },
+      title: "Sorteios",
+      info: (
+        <p>
+          Durante os eventos, a Devs Norte realiza sorteios de livros, cursos, e ferramentas utilizadas por programadores. Os sorteios são uma forma
+          divertida de envolver os participantes e estimular a participação nos eventos. Eles também incentivam a comunidade de desenvolvedores a
+          compartilhar ainda mais conhecimentos e recursos.
+        </p>
+      ),
+    },
     {
       image: {
         url: "/images/palestras.png",
@@ -81,20 +96,6 @@ export const useLandingPageInfos = () => {
             <EventList events={events} />
           )}
         </>
-      ),
-    },
-    {
-      image: {
-        url: "/images/sorteios.png",
-        alt: "Imagem de Palestra",
-      },
-      title: "Sorteios",
-      info: (
-        <p>
-          Durante os eventos, a Devs Norte realiza sorteios de livros, cursos, e ferramentas utilizadas por programadores. Os sorteios são uma forma
-          divertida de envolver os participantes e estimular a participação nos eventos. Eles também incentivam a comunidade de desenvolvedores a
-          compartilhar ainda mais conhecimentos e recursos.
-        </p>
       ),
     },
   ];
