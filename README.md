@@ -2,11 +2,11 @@
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
 
-Bem-vindo à Landing Page da Comunidade Devs Norte! Aqui você encontrará informações sobre nossa comunidade, eventos, recursos e muito mais.
+Bem-vindo à Landing Page da Comunidade Devs Norte!
 
 ## Sobre Nós
 
-A Comunidade Devs Norte é uma plataforma online dedicada a reunir desenvolvedores de software do Norte do Brasil. Nosso objetivo é promover a colaboração, o aprendizado e o networking entre profissionais de tecnologia da região.
+A Devs Norte é uma comunidade dedicada a reunir desenvolvedores de software do Norte do Brasil. Nosso objetivo é promover a colaboração, o aprendizado e o networking entre profissionais de tecnologia da região.
 
 ## Recursos
 
@@ -83,51 +83,13 @@ Para padronizar as mensagens de commit, recomendamos o uso da ferramenta `git-cz
 npm run commit
 ```
 
-# Contribuidores
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/iago-a-cavalcante/">
-        <img src="https://avatars.githubusercontent.com/u/5131187?v=4" width="100px;" alt="Iago Cavalcante"/><br>
-        <sub>
-          <b>Iago Cavalcante</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/daywison-s-ab11b6121/">
-        <img src="https://avatars.githubusercontent.com/DaywisonSilva" width="100px;" alt="Lubien"/><br>
-        <sub>
-          <b>Daywison Silva</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/suamirochadev/">
-        <img src="https://avatars.githubusercontent.com/suamirochadev" width="100px;" alt="Lubien"/><br>
-        <sub>
-          <b>Suami Rocha</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/edsncostadev/">
-        <img src="https://avatars.githubusercontent.com/ecsistem" width="100px;" alt="Lubien"/><br>
-        <sub>
-          <b>Edson Costa</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
 ## Contato
 
 Para mais informações ou dúvidas, entre em contato conosco ou siga-nos nas redes sociais:
 
-- Twitter: [@devsnorte](https://twitter.com/devsnorte)
+- Discord: [Devs Norte](https://discord.gg/V825KxKzcQ)
 - Instagram: [@devsnorte](https://instagram.com/devsnorte)
+- Twitter: [@devsnorte](https://twitter.com/devsnorte)
 - YouTube: [Devs Norte](https://www.youtube.com/c/DevsNorte)
 
 Estamos ansiosos para conhecer você e tornar nossa comunidade ainda mais incrível juntos! 🚀
@@ -139,3 +101,19 @@ Este projeto é licenciado sob os termos da [Licença MIT](LICENSE.md).
 ## Código de Conduta
 
 Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entender nossas diretrizes de comportamento e as medidas a serem tomadas em caso de violação.
+
+## Contribuidores ✨
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+---
+<p align="center">
+Developed with ❤️
+</p>
