@@ -1,4 +1,7 @@
 # Landing Page - Comunidade Devs Norte
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
 
@@ -107,6 +110,13 @@ Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entend
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.gitshowcase.com/ecsistem"><img src="https://avatars.githubusercontent.com/u/61160635?v=4?s=100" width="100px;" alt="Edson Costa"/><br /><sub><b>Edson Costa</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ecsistem" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
@@ -117,3 +127,16 @@ Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entend
 <p align="center">
 Developed with ❤️
 </p>
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
