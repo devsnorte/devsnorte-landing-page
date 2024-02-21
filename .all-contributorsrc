@@ -14,7 +14,8 @@
       "profile": "https://www.linkedin.com/in/daywison-s-ab11b6121/",
       "contributions": [
         "review",
-        "code"
+        "code",
+        "design"
       ]
     },
     {
@@ -27,12 +28,12 @@
       ]
     },
     {
-      "login": "ecsistem",
-      "name": "Edson Costa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
-      "profile": "https://www.gitshowcase.com/ecsistem",
+      "login": "iagocavalcante",
+      "name": "Iago Angelim Costa Cavalcante",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5131187?v=4",
+      "profile": "https://iagocavalcante.com/",
       "contributions": [
-        "code"
+        "review"
       ]
     },
     {
@@ -40,6 +41,26 @@
       "name": "Suami Rocha",
       "avatar_url": "https://avatars.githubusercontent.com/u/110056279?v=4",
       "profile": "https://bento.me/suamirochadev",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "ecsistem",
+      "name": "Edson Costa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
+      "profile": "https://www.gitshowcase.com/ecsistem",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "juanrtalmeida",
+      "name": "Juan Rodrigues Teixeira Almeida ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75220133?v=4",
+      "profile": "https://github.com/juanrtalmeida",
       "contributions": [
         "code",
         "bug"
