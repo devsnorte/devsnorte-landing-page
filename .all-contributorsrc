@@ -14,7 +14,8 @@
       "profile": "https://www.linkedin.com/in/daywison-s-ab11b6121/",
       "contributions": [
         "review",
-        "code"
+        "code",
+        "design"
       ]
     },
     {
@@ -24,15 +25,6 @@
       "profile": "https://thayanacmamore.dev",
       "contributions": [
         "review"
-      ]
-    },
-    {
-      "login": "ecsistem",
-      "name": "Edson Costa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
-      "profile": "https://www.gitshowcase.com/ecsistem",
-      "contributions": [
-        "code"
       ]
     },
     {
@@ -51,6 +43,16 @@
       "profile": "https://bento.me/suamirochadev",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "ecsistem",
+      "name": "Edson Costa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
+      "profile": "https://www.gitshowcase.com/ecsistem",
+      "contributions": [
+        "code",
+        "bug"
       ]
     },
     {
