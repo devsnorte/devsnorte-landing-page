@@ -119,9 +119,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-
-
-
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/daywison-s-ab11b6121/"><img src="https://avatars.githubusercontent.com/u/54292958?v=4?s=100" width="100px;" alt="Daywison Silva"/><br /><sub><b>Daywison Silva</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3ADaywisonSilva" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=DaywisonSilva" title="Code">💻</a> <a href="#design-DaywisonSilva" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://thayanacmamore.dev"><img src="https://avatars.githubusercontent.com/u/8525721?v=4?s=100" width="100px;" alt="Thayana Correa Mamore"/><br /><sub><b>Thayana Correa Mamore</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3Athauska" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://iagocavalcante.com/"><img src="https://avatars.githubusercontent.com/u/5131187?v=4?s=100" width="100px;" alt="Iago Angelim Costa Cavalcante"/><br /><sub><b>Iago Angelim Costa Cavalcante</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3Aiagocavalcante" title="Reviewed Pull Requests">👀</a></td>
