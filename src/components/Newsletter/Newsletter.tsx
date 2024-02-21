@@ -3,11 +3,6 @@ import Section from "../Section"
 
 const Newsletter = () =>  {
   return (
-
-<>
-
- 
-
 <div className="mx-auto lg:w-6/12 mb-4 p-4 z-50">
   <div className="flex items-center">
     <div>
@@ -45,10 +40,6 @@ const Newsletter = () =>  {
     </button>
   </form>
 </div>
-
-
-</>
-
 
 );
 
