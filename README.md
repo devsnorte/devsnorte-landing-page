@@ -1,8 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -148,6 +146,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://bento.me/suamirochadev"><img src="https://avatars.githubusercontent.com/u/110056279?v=4?s=100" width="100px;" alt="Suami Rocha"/><br /><sub><b>Suami Rocha</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=suamirochadev" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Asuamirochadev" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.gitshowcase.com/ecsistem"><img src="https://avatars.githubusercontent.com/u/61160635?v=4?s=100" width="100px;" alt="Edson Costa"/><br /><sub><b>Edson Costa</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ecsistem" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Aecsistem" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/juanrtalmeida"><img src="https://avatars.githubusercontent.com/u/75220133?v=4?s=100" width="100px;" alt="Juan Rodrigues Teixeira Almeida "/><br /><sub><b>Juan Rodrigues Teixeira Almeida </b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=juanrtalmeida" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Ajuanrtalmeida" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://thiagofigueiroribeiro.github.io/"><img src="https://avatars.githubusercontent.com/u/8943388?v=4?s=100" width="100px;" alt="Thiago Figueiró Ribeiro"/><br /><sub><b>Thiago Figueiró Ribeiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3AThiagoFigueiroRibeiro" title="Bug reports">🐛</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ThiagoFigueiroRibeiro" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
