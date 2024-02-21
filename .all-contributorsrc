@@ -8,11 +8,12 @@
   "commitConvention": "angular",
   "contributors": [
     {
-      "login": "ecsistem",
-      "name": "Edson Costa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
-      "profile": "https://www.gitshowcase.com/ecsistem",
+      "login": "DaywisonSilva",
+      "name": "Daywison Silva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54292958?v=4",
+      "profile": "https://www.linkedin.com/in/daywison-s-ab11b6121/",
       "contributions": [
+        "review",
         "code"
       ]
     },
@@ -26,14 +27,22 @@
       ]
     },
     {
-      "login": "DaywisonSilva",
-      "name": "Daywison Silva",
-      "avatar_url": "https://avatars.githubusercontent.com/u/54292958?v=4",
-      "profile": "https://www.linkedin.com/in/daywison-s-ab11b6121/",
+      "login": "ecsistem",
+      "name": "Edson Costa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
+      "profile": "https://www.gitshowcase.com/ecsistem",
       "contributions": [
-        "review",
         "code"
       ]
+    },
+    {
+      "login": "suamirochadev",
+      "name": "Suami Rocha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110056279?v=4",
+      "profile": "https://bento.me/suamirochadev",
+      "contributions": [
+        "code"
+      ]      
     }
   ],
   "contributorsPerLine": 7,
