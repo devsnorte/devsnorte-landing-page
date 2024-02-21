@@ -76,6 +76,15 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "cleisoncarlos",
+      "name": "Cleison Carlos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5004792?v=4",
+      "profile": "http://www.cleisoncarlos.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
