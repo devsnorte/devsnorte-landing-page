@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "ecsistem",
+      "name": "Edson Costa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
+      "profile": "https://www.gitshowcase.com/ecsistem",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "devsnorte-landing-page",
+  "projectOwner": "devsnorte"
+}
