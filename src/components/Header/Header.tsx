@@ -12,6 +12,16 @@ const Header = ({ className = "", ...rest }: HeaderProps) => {
     router.push(router.pathname, router.asPath, { locale: value });
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <header className={`flex flex-col items-center justify-center px-5`}>
       <link rel="icon" href="/icons/favicon.svg" type="image/svg" sizes="32x32" />
@@ -23,7 +33,17 @@ const Header = ({ className = "", ...rest }: HeaderProps) => {
 
         <div className="flex gap-[10px] items-center">
           <div className="hover:pointer">
-            <Image src="/icons/menu.svg" width={60} height={60} alt="menu" className="w-full xl:w-14" />
+            <Dropdown
+            placeholder={<Image src="/icons/menu.svg" width={50} height={50} alt="menu" className="w-6 h-6" />}
+            onSelect={(value) => scrollToSection(value as string)}
+            data={[
+              { label: "Networking", value: "networking" },
+              { label: "Sorteios", value: "sorteios" },
+              { label: "Palestras", value: "palestras" },
+              { label: "Próximos eventos", value: "proximoseventos" },
+            ]}
+            
+          />
           </div>
           <Dropdown
             placeholder={<Translate className="w-6 h-6" />}
