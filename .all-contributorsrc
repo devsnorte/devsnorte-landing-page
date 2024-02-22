@@ -42,7 +42,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/110056279?v=4",
       "profile": "https://bento.me/suamirochadev",
       "contributions": [
-        "code"
+        "code",
+        "bug"
       ]
     },
     {
@@ -52,7 +53,8 @@
       "profile": "https://www.gitshowcase.com/ecsistem",
       "contributions": [
         "code",
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -64,6 +66,25 @@
         "code",
         "bug",
         "translation"
+      ]
+    },
+    {
+      "login": "ThiagoFigueiroRibeiro",
+      "name": "Thiago Figueiró Ribeiro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8943388?v=4",
+      "profile": "https://thiagofigueiroribeiro.github.io/",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "cleisoncarlos",
+      "name": "Cleison Carlos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5004792?v=4",
+      "profile": "http://www.cleisoncarlos.com",
+      "contributions": [
+        "code"
       ]
     }
   ],

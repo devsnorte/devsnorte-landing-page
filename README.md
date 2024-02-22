@@ -1,6 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -26,6 +26,31 @@ Este site foi desenvolvido utilizando o framework Next.js versão 14, uma podero
 ## Deploy
 
 O site está disponível para visualização em [devsnorte.netlify.app](https://devsnorte.netlify.app/).
+
+## O que é necessário antes da instalação
+
+Você precisa ter o Node.js e o NPM (Node Package Manager) instalados para rodar a aplicação.
+
+### Instalação Linux
+No terminal, rode os seguintes comandos: 
+```bash
+sudo apt update
+sudo apt install nodejs
+```
+
+### Instalação Windows
+Instale a versão mais recente no link a seguir:
+```bash
+https://nodejs.org/en/download/
+```
+Ele já instala o NPM junto com o Node.js.
+
+### Para verificar se a instalação deu certo, rode:
+```bash
+node --version
+npm --version
+```
+Devem aparecer as versões do Node.js e do npm na sua linha de comando.
 
 ## Como Instalar
 
@@ -121,6 +146,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://bento.me/suamirochadev"><img src="https://avatars.githubusercontent.com/u/110056279?v=4?s=100" width="100px;" alt="Suami Rocha"/><br /><sub><b>Suami Rocha</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=suamirochadev" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.gitshowcase.com/ecsistem"><img src="https://avatars.githubusercontent.com/u/61160635?v=4?s=100" width="100px;" alt="Edson Costa"/><br /><sub><b>Edson Costa</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ecsistem" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Aecsistem" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/juanrtalmeida"><img src="https://avatars.githubusercontent.com/u/75220133?v=4?s=100" width="100px;" alt="Juan Rodrigues Teixeira Almeida "/><br /><sub><b>Juan Rodrigues Teixeira Almeida </b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=juanrtalmeida" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Ajuanrtalmeida" title="Bug reports">🐛</a> <a href="#translation-juanrtalmeida" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://thiagofigueiroribeiro.github.io/"><img src="https://avatars.githubusercontent.com/u/8943388?v=4?s=100" width="100px;" alt="Thiago Figueiró Ribeiro"/><br /><sub><b>Thiago Figueiró Ribeiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3AThiagoFigueiroRibeiro" title="Bug reports">🐛</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ThiagoFigueiroRibeiro" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.cleisoncarlos.com"><img src="https://avatars.githubusercontent.com/u/5004792?v=4?s=100" width="100px;" alt="Cleison Carlos"/><br /><sub><b>Cleison Carlos</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=cleisoncarlos" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
@@ -134,5 +163,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ---
 <p align="center">
-Developed with ❤️
+Developed with ❤️ from community for community
 </p>
