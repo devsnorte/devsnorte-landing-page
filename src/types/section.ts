@@ -17,6 +17,7 @@ export interface SectionImageProps extends ImageProps {}
 
 export interface SectionContainerProps {
   children: React.ReactNode;
+  id?: string
 }
 
 export interface SectionContainerContentProps {

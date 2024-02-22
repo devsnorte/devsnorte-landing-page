@@ -3,11 +3,15 @@ import Link from "next/link";
 import { Dropdown } from "../DropDown/Dropdown";
 import { useRouter } from "next/router";
 import Translate from "/public/icons/translate.svg";
+import { useTranslation } from "next-i18next";
+import { useLandingPageInfos } from "@/hooks/useLandingPageInfos";
 
 interface HeaderProps extends React.HTMLAttributes<HTMLElement> {}
 
 const Header = ({ className = "", ...rest }: HeaderProps) => {
   const router = useRouter();
+  const { t } = useTranslation();
+  const sections = useLandingPageInfos();
   const onSelectLanguage = (value: string) => {
     router.push(router.pathname, router.asPath, { locale: value });
   };
@@ -17,7 +21,7 @@ const Header = ({ className = "", ...rest }: HeaderProps) => {
     if (section) {
       window.scrollTo({
         top: section.offsetTop,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -34,16 +38,10 @@ const Header = ({ className = "", ...rest }: HeaderProps) => {
         <div className="flex gap-[10px] items-center">
           <div className="hover:pointer">
             <Dropdown
-            placeholder={<Image src="/icons/menu.svg" width={50} height={50} alt="menu" className="w-6 h-6" />}
-            onSelect={(value) => scrollToSection(value as string)}
-            data={[
-              { label: "Networking", value: "networking" },
-              { label: "Sorteios", value: "sorteios" },
-              { label: "Palestras", value: "palestras" },
-              { label: "Próximos eventos", value: "proximoseventos" },
-            ]}
-            
-          />
+              placeholder={<Image src="/icons/menu.svg" width={50} height={50} alt="menu" className="w-6 h-6" />}
+              onSelect={(value) => scrollToSection(value as string)}
+              data={[...sections.map((section) => ({ label: section.title, value: section.title }))]}
+            />
           </div>
           <Dropdown
             placeholder={<Translate className="w-6 h-6" />}
