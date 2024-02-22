@@ -1,9 +1,7 @@
 @tailwind utilities;
 
 .text {
-  opacity: 0;
-  animation: text 3s ease-in-out 0.5s forwards;
-  @apply text-center relative bottom-4 font-light;
+  @apply opacity-0 text-center relative bottom-4 font-light animate-[text_3s_ease-in-out_0.5s_forwards];
 }
 
 @keyframes text {
@@ -22,9 +20,7 @@
 }
 
 .line {
-  transform: scaleX(0);
-  transform-origin: right;
-  animation: line-animation 0.5s ease-in-out 1s forwards;
+  @apply scale-x-0 origin-right animate-[line-animation_0.5s_ease-in-out_1s_forwards]
 }
 
 @keyframes line-animation {

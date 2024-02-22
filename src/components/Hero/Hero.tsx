@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="mx-auto my-64 relative max-w-screen-md">
         <hr className={`w-20 absolute right-1 -top-10 ${css.line}`} />
         <ImageHero />
-        <p className={`mt-5 text-base lg:text-3xl opacity-0`} ref={textHeroSubtitleRef}>
+        <p className="mt-5 text-base lg:text-3xl opacity-0" ref={textHeroSubtitleRef}>
           {t("heroSubtitle")}
         </p>
         <hr className={`w-40 absolute right-0 ${css.line}`} />
