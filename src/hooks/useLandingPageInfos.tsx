@@ -1,7 +1,9 @@
 import { EventList } from "@/components/Events";
 import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 
 export const useLandingPageInfos = () => {
+  const { t } = useTranslation();
   const [events, setEvents] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -43,15 +45,10 @@ export const useLandingPageInfos = () => {
     {
       image: {
         url: "/images/networking.png",
-        alt: "netwotking",
+        alt: t("netwotking"),
       },
-      title: "Networking",
-      info: (
-        <p>
-          Eventos de tecnologia (TI) são excelentes oportunidades para networking. Esses eventos reúnem pessoas de diversos setores da indústria,
-          incluindo desenvolvedores, empresários, investidores, especialistas em marketing, designers, entre outros.
-        </p>
-      ),
+      title: t("Networking"),
+      info: <p>{t("networkingSubtitle")}</p>,
     },
 
     {
@@ -59,44 +56,24 @@ export const useLandingPageInfos = () => {
         url: "/images/sorteios.png",
         alt: "Imagem de Palestra",
       },
-      title: "Sorteios",
-      info: (
-        <p>
-          Durante os eventos, a Devs Norte realiza sorteios de livros, cursos, e ferramentas utilizadas por programadores. Os sorteios são uma forma
-          divertida de envolver os participantes e estimular a participação nos eventos. Eles também incentivam a comunidade de desenvolvedores a
-          compartilhar ainda mais conhecimentos e recursos.
-        </p>
-      ),
+      title: t("giveaways"),
+      info: <p>{t("giveawaysSubtitle")}</p>,
     },
     {
       image: {
         url: "/images/palestras.png",
         alt: "Imagem de Palestra",
       },
-      title: "Palestras",
-      info: (
-        <p>
-          Os eventos da Devs Norte são conhecidos por serem excelentes fontes de compartilhamento de conhecimento em programação. A Devs Norte é uma
-          comunidade de desenvolvedores que promove eventos, meetups e workshops para compartilhar ideias, experiências e soluções para os desafios
-          enfrentados pelos programadores.
-        </p>
-      ),
+      title: t("lecture"),
+      info: <p>{t("lectureSubtitle")}</p>,
     },
     {
       image: {
         url: "/images/eventos.png",
         alt: "Eventos Sympla",
       },
-      title: "Próximos Eventos",
-      info: (
-        <>
-          {events.length === 0 ? (
-            <p>Ops! Parece que não há eventos disponíveis no momento. Volte mais tarde para verificar novos eventos!</p>
-          ) : (
-            <EventList events={events} />
-          )}
-        </>
-      ),
+      title: t("nextEvents"),
+      info: <>{events.length === 0 ? <p>{t("noEvents")}</p> : <EventList events={events} />}</>,
     },
   ];
   return infos;
