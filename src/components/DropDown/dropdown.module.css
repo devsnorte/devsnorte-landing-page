@@ -1,68 +1,38 @@
 .dropdown {
-  border: 2px solid black;
-  position: relative;
-  z-index: 20;
-  width: fit-content;
+  @apply border border-black relative z-20 w-fit
 }
 
 .dropdownPlaceholder {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
+  @apply cursor-pointer flex justify-between items-center text-black
 }
 
 .header {
-  padding: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @apply p-3.5 cursor-pointer flex justify-between items-center
 }
 
-.body {
-  margin-top: 10px;
-  padding: 5px;
-  position: absolute;
-  top: 100%;
-  flex-direction: column;
-  animation: onEnter 0.4s ease-in-out;
-}
-
-@keyframes onEnter {
-  from {
+@keyframes opacity {
+  0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
   }
-
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+.body {
+  @apply p-1.5 mt-2.5 absolute top-full flex flex-col animate-[opacity_0.6s_ease-in-out] 
+}
+
 .dropdownItem {
-  padding: 10px;
-  color: black;
-}
-
-.dropdownItem:not(:last-child) {
-  border-bottom: 1px solid #000000;
-}
-
-.dropdownItem:hover {
-  cursor: pointer;
+  @apply p-2.5 text-black border-b-black border-b last-of-type:border-b-0
 }
 
 .icon {
-  transform: rotate(-180deg);
-  width: 13px;
-  height: 13px;
-  color: #020911;
-  transition: all 0.2s ease-in-out;
+  @apply rotate-180 w-2.5 h-2.5 transition-all ease-in-out duration-200 text-black
 }
 
 .icon.open {
-  transform: rotate(90deg);
+  @apply rotate-90
 }
