@@ -4,7 +4,7 @@ import { SectionContainerProps } from "@/types/section";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-export const Container = ({ children }: SectionContainerProps) => {
+export const Container = ({ children, id }: SectionContainerProps) => {
   const textRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef(null);
 
@@ -37,7 +37,7 @@ export const Container = ({ children }: SectionContainerProps) => {
   }, []);
 
   return (
-    <section ref={triggerRef} className=" w-full flex flex-col md:flex-row-reverse">
+    <section id={id} ref={triggerRef} className=" w-full flex flex-col md:flex-row-reverse">
       {children}
     </section>
   );

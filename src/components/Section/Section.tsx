@@ -22,7 +22,7 @@ const SectionPrincipal = () => {
   return landingPageInfos.map((section, index) => {
     const isEven = index % 2 === 0;
     return (
-      <Section.Container key={section.title}>
+      <Section.Container id={section.title} key={section.title}>
         <Section.Image src={section.image.url} alt={section.image.alt} />
         <Section.Content variant={isEven ? "black" : "brand"}>
           <Section.Title>{section.title}</Section.Title>
