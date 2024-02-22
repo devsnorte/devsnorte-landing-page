@@ -163,5 +163,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ---
 <p align="center">
-Developed with ❤️ from community for community
+Developed with ❤️ from community to community
 </p>
