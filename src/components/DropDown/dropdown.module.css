@@ -22,7 +22,7 @@
 }
 
 .body {
-  @apply p-1.5 mt-2.5 absolute top-full flex flex-col animate-[opacity_0.6s_ease-in-out];
+  @apply max-lg:ml-[-2rem] p-1.5 mt-2.5 absolute top-full flex flex-col animate-[opacity_0.6s_ease-in-out];
 }
 
 .dropdownItem {
