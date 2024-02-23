@@ -1,6 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -148,6 +148,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/juanrtalmeida"><img src="https://avatars.githubusercontent.com/u/75220133?v=4?s=100" width="100px;" alt="Juan Rodrigues Teixeira Almeida "/><br /><sub><b>Juan Rodrigues Teixeira Almeida </b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=juanrtalmeida" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Ajuanrtalmeida" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://thiagofigueiroribeiro.github.io/"><img src="https://avatars.githubusercontent.com/u/8943388?v=4?s=100" width="100px;" alt="Thiago Figueiró Ribeiro"/><br /><sub><b>Thiago Figueiró Ribeiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3AThiagoFigueiroRibeiro" title="Bug reports">🐛</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ThiagoFigueiroRibeiro" title="Documentation">📖</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ThiagoFigueiroRibeiro" title="Code">💻</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.cleisoncarlos.com"><img src="https://avatars.githubusercontent.com/u/5004792?v=4?s=100" width="100px;" alt="Cleison Carlos"/><br /><sub><b>Cleison Carlos</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=cleisoncarlos" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/ruan-valente"><img src="https://avatars.githubusercontent.com/u/6674232?v=4?s=100" width="100px;" alt="Ruan Valente"/><br /><sub><b>Ruan Valente</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ruanvalente" title="Code">💻</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -160,5 +164,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ---
 <p align="center">
-Developed with ❤️
+Developed with ❤️ from community to community
 </p>

@@ -1,0 +1,38 @@
+.dropdown {
+  @apply border border-black relative z-20 w-fit;
+}
+
+.dropdownPlaceholder {
+  @apply cursor-pointer flex justify-between items-center text-black;
+}
+
+.header {
+  @apply p-3.5 cursor-pointer flex justify-between items-center;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.body {
+  @apply max-lg:ml-[-2rem] p-1.5 mt-2.5 absolute top-full flex flex-col animate-[opacity_0.6s_ease-in-out];
+}
+
+.dropdownItem {
+  @apply p-2.5 text-black border-b-black border-b last-of-type:border-b-0 cursor-pointer;
+}
+
+.icon {
+  @apply rotate-180 w-2.5 h-2.5 transition-all ease-in-out duration-200 text-black;
+}
+
+.icon.open {
+  @apply rotate-90;
+}

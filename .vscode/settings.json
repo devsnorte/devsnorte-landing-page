@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#5ED29E",
+    "statusBar.foreground": "#000000"
+  }
+}
