@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Html, Main, Head, NextScript } from "next/document";
 
 const seo = {
   title: 'Devs Norte',
-  description: "A maior comunidade de Desenvolvedores do Norte do Brasil",
-  keywords: ['palavra1', 'palavra2', 'palavra3'],
-  url: "www.devsnorte.com.br",
-  urlImage: "https://devsnorte.netlify.app/_ipx/w_828,q_75/%2Fimages%2Fnetworking.png?url=%2Fimages%2Fnetworking.png"
-}
+  description: 'A maior comunidade de Desenvolvedores do Norte do Brasil',
+  keywords: ["Desenvolvimento de Software", "Programação", "Comunidade de Desenvolvedores", "Belém", "Tecnologia", "Código Fonte", "Meetups de Desenvolvedores", "Eventos Tech", "Networking Profissional", "Inovação Tecnológica", "Startups", "Empreendedorismo Digital", "Web Development", "Mobile Development", "Inteligência Artificial", "Internet das Coisas (IoT)", "Cloud Computing", "Linguagens de Programação", "Ferramentas de Desenvolvimento", "Educação em Tecnologia"],
+  url: 'www.devsnorte.com.br',
+  urlImage: 'https://devsnorte.netlify.app/_ipx/w_828,q_75/%2Fimages%2Fnetworking.png?url=%2Fimages%2Fnetworking.png',
+};
 
-export const metadata: Metadata = {
+
+const metadata = {
   title: seo.title,
   description: seo.description,
   keywords: seo.keywords,
@@ -17,11 +18,11 @@ export const metadata: Metadata = {
     title: seo.title,
     url: seo.url,
     description: seo.description,
-    type: "website",
+    type: 'website',
     images: [
       {
         url: seo.urlImage,
-        type: "image/jpg",
+        type: 'image/jpg',
         width: 1200,
         height: 630,
         alt: seo.title,
@@ -29,25 +30,48 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: seo.title,
     description: seo.description,
     images: [
       {
         url: seo.urlImage,
-        type: "image/jpg",
+        type: 'image/jpg',
         width: 1200,
         height: 630,
-        alt: "EMM",
+        alt: 'EMM',
       },
     ],
   },
-}
+};
+
 
 export default function Document() {
   return (
     <Html>
-      <Head />
+      <Head>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(', ')} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:type" content={metadata.openGraph.images[0].type} />
+        <meta property="og:image:width" content={metadata.openGraph.images[0].width.toString()} />
+        <meta property="og:image:height" content={metadata.openGraph.images[0].height.toString()} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0].url} />
+        <meta name="twitter:image:alt" content={metadata.twitter.images[0].alt} />
+      </Head>
+
       <body>
         <Main />
         <NextScript />
