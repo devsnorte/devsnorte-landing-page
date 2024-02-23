@@ -1,16 +1,16 @@
-import { Metadata } from "next";
+/* eslint-disable @next/next/no-title-in-document-head */
 import { Html, Main, Head, NextScript } from "next/document";
 
 const seo = {
   title: 'Devs Norte',
-  description: 'A maior comunidade de Desenvolvedores do Norte do Brasil',
+  description: 'Explore o universo da tecnologia conosco! Seja parte da maior comunidade de desenvolvedores do Norte do Brasil. Conecte-se, aprenda e colabore com profissionais apaixonados por inovação e desenvolvimento de software. Junte-se a nós para impulsionar seu conhecimento, compartilhar experiências e faça parte da nossa comunidade.',
   keywords: ["Desenvolvimento de Software", "Programação", "Comunidade de Desenvolvedores", "Belém", "Tecnologia", "Código Fonte", "Meetups de Desenvolvedores", "Eventos Tech", "Networking Profissional", "Inovação Tecnológica", "Startups", "Empreendedorismo Digital", "Web Development", "Mobile Development", "Inteligência Artificial", "Internet das Coisas (IoT)", "Cloud Computing", "Linguagens de Programação", "Ferramentas de Desenvolvimento", "Educação em Tecnologia"],
   url: 'www.devsnorte.com.br',
   urlImage: 'https://devsnorte.netlify.app/_ipx/w_828,q_75/%2Fimages%2Fnetworking.png?url=%2Fimages%2Fnetworking.png',
 };
 
 
-const metadata = {
+export const metadata = {
   title: seo.title,
   description: seo.description,
   keywords: seo.keywords,
@@ -50,6 +50,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
+        <title>{seo.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(', ')} />
 
