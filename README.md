@@ -59,13 +59,13 @@ Para instalar e rodar o projeto localmente, siga estes passos:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/suaconta/nome-do-repositorio.git
+git clone https://github.com/devsnorte/devsnorte-landing-page.git
 ```
 
 2. Acesse o diretório do projeto:
 
 ```bash
-cd nome-do-repositorio
+cd devsnorte-landing-page
 ```
 
 3. Instale as dependências:
@@ -94,7 +94,7 @@ O layout do site está disponível no Figma para visualização e contribuiçõe
 
 Adoramos contribuições! Se você quiser contribuir para o projeto, siga estas etapas:
 
-1. Verifique as [issues abertas](https://github.com/suaconta/nome-do-repositorio/issues) para ver se há algo em que possa ajudar.
+1. Verifique as [issues abertas](https://github.com/devsnorte/devsnorte-landing-pageo/issues) para ver se há algo em que possa ajudar.
 2. Se encontrar uma issue que gostaria de resolver, comente nela para que possamos atribuí-la a você.
 3. Depois de receber a atribuição, faça um fork do repositório, faça suas alterações e envie um pull request.
 4. Certifique-se de descrever claramente suas alterações no pull request e vincule a issue correspondente.
