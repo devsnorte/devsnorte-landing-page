@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useState } from "react";
 import styles from "./dropdown.module.css";
 import Arrow from "/public/icons/arrow.svg";
 
@@ -13,17 +13,6 @@ export const Dropdown = ({
   onSelect: (value: unknown) => void;
 }) => {
   const [isOpen, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      if (ref.current && isOpen && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("click", handleClick);
-  }, [isOpen]);
 
   const toggleDropdown = () => setOpen(!isOpen);
 
@@ -33,7 +22,7 @@ export const Dropdown = ({
   };
 
   return (
-    <div ref={ref} className={`${styles.dropdown} bg-brand`}>
+    <div className={`${styles.dropdown} bg-brand`}>
       <div className={styles.header} onClick={toggleDropdown}>
         <span className={styles.dropdownPlaceholder}>{placeholder}</span>
         <Arrow className={` ${styles.icon} ${isOpen && styles.open}`}></Arrow>
