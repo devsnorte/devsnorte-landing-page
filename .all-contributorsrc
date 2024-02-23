@@ -86,6 +86,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ruanvalente",
+      "name": "Ruan Valente",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6674232?v=4",
+      "profile": "https://www.linkedin.com/in/ruan-valente",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
