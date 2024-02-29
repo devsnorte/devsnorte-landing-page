@@ -6,7 +6,9 @@
   "giveawaysSubtitle": "During events, Devs Norte holds giveaways for books, courses, and tools used by programmers. Giveaways are a fun way to engage participants and encourage participation in events. They also encourage the developer community to share even more knowledge and resources.",
   "lecture": "Lectures",
   "lectureSubtitle": "Devs Norte events are known for being excellent sources of sharing programming knowledge. Devs Norte is a community of developers that promotes events, meetups and workshops to share ideas, experiences and solutions to the challenges faced by programmers.",
-  "nextEvents": "Next Events",
+  "events": "Events",
   "noEvents": "Oops! It appears there are no events available at this time. Check back later to check for new events!",
+  "available": "Available",
+  "closed": "Closed",
   "gallery": "Gallery"
 }
