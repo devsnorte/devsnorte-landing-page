@@ -30,9 +30,9 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
     useEffect(() => {
         if (galleryRef.current) {
             gsap.from(galleryRef.current.children, {
-                opacity: 0,
+                opacity: 0.7,
                 x: index => (index % 2 === 0 ? -350 : 350),
-                stagger: 0.8,
+                stagger: 0.1,
                 duration: 1,
                 ease: 'power3.out',
                 scrollTrigger: {
