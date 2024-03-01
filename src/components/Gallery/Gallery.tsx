@@ -64,7 +64,7 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
             </div>
             <div ref={galleryRef} className='overflow-hidden'>
                 {imageGroups.map((group, groupIndex) => (
-                    <div key={groupIndex} className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-4'>
+                    <div key={groupIndex} className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-4 my-4'>
                         {group.map((image, index) => (
                             <div key={index} className='w-full overflow-hidden cursor-pointer'>
                                 <Image src={image} alt={`Gallery Image ${index + 1}`} width={800} height={600} layout='responsive' objectFit='cover' />
