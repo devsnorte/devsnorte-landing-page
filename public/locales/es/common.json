@@ -10,5 +10,10 @@
   "noEvents": "¡Ups! Parece que no hay eventos disponibles en este momento. ¡Vuelve más tarde para comprobar si hay nuevos eventos!",
   "available": "Disponible",
   "closed": "Cerrado",
-  "gallery": "Galería"
+  "gallery": "Galería",
+  "stayUpdated": "Mantente al día con las últimas novedades",
+  "exclusiveContent": "Recibe contenido exclusivo directamente en tu bandeja de entrada. ¡Suscríbete a nuestro boletín y mantente actualizado sobre las últimas noticias de la comunidad. ¡Regístrate ahora!",
+  "subscribe": "Suscribirse",
+  "fullName": "Nombre completo",
+  "email": "Correo electrónico"
 }

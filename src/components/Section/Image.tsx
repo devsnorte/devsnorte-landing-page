@@ -9,7 +9,7 @@ export const Image = ({ className, width = 768, height = 835, ...rest }: Section
       width={width}
       height={height}
       {...rest}
-      className={`h-full flex-grow object-cover object-top md:w-[330px] lg:w-[460px] xl:w-[unset]  object-cover ${className}`}
+      className={`h-full flex-grow object-cover object-top md:w-[330px] lg:w-[460px] xl:w-[unset]  ${className}`}
     />
   );
 };
