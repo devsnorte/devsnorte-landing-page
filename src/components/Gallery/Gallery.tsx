@@ -32,13 +32,13 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
             gsap.from(galleryRef.current.children, {
                 opacity: 0.7,
                 x: index => (index % 2 === 0 ? -350 : 350),
-                stagger: 0.1,
+                stagger: 0.8,
                 duration: 1,
                 ease: 'power3.out',
                 scrollTrigger: {
                     trigger: galleryRef.current,
-                    start: 'top 80%',
-                    end: 'bottom top',
+                    start: 'top bottom', // Alterado para 'top bottom'
+                    end: 'bottom top', // Alterado para 'bottom top'
                     scrub: true,
                     markers: false
                 }
