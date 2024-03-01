@@ -30,19 +30,33 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
     useEffect(() => {
         if (galleryRef.current) {
             gsap.from(galleryRef.current.children, {
-                opacity: 0.7,
+                opacity: 0,
                 x: index => (index % 2 === 0 ? -350 : 350),
                 stagger: 0.8,
                 duration: 1,
                 ease: 'power3.out',
                 scrollTrigger: {
                     trigger: galleryRef.current,
-                    start: 'top bottom', // Alterado para 'top bottom'
-                    end: 'bottom top', // Alterado para 'bottom top'
-                    scrub: true,
-                    markers: false
+                    start: 'top 30%', // Começa a animação quando o elemento está 80% visível na janela
+                    end: 'bottom 20%', // Termina a animação quando o elemento está 20% visível na janela
+                    scrub: true, // Suaviza o movimento de acordo com o scroll
+                    markers: false // Remove os marcadores do ScrollTrigger
                 }
-            });
+            }),
+            gsap.to(galleryRef.current.children, {
+                opacity: 1,
+                x: 0,
+                stagger: 0.8,
+                duration: 1,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: galleryRef.current,
+                    start: 'top 30%', // Começa a animação quando o elemento está 80% visível na janela
+                    end: 'bottom 20%', // Termina a animação quando o elemento está 20% visível na janela
+                    scrub: true, // Suaviza o movimento de acordo com o scroll
+                    markers: false // Remove os marcadores do ScrollTrigger
+                }
+            })
         }
     }, [windowWidth, images]);
 
