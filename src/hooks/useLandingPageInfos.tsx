@@ -1,6 +1,8 @@
 import { EventList } from "@/components/Events";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
+import Gallery from "@/components/Gallery";
+import { exampleImages } from "@/data/mock/gallery";
 
 export const useLandingPageInfos = () => {
   const { t } = useTranslation();
@@ -74,6 +76,10 @@ export const useLandingPageInfos = () => {
       },
       title: t("nextEvents"),
       info: <>{events.length === 0 ? <p>{t("noEvents")}</p> : <EventList events={events} />}</>,
+    },
+    {
+      title: t("gallery"),
+      customSection: <Gallery images={exampleImages} />,
     },
   ];
   return infos;
