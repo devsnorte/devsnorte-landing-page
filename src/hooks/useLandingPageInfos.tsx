@@ -1,5 +1,7 @@
 import { EventContent } from "@/components/Events/EventContent";
 import { useTranslation } from "next-i18next";
+import Gallery from "@/components/Gallery";
+import { exampleImages } from "@/data/mock/gallery";
 
 export const useLandingPageInfos = () => {
   const { t } = useTranslation();
@@ -36,6 +38,10 @@ export const useLandingPageInfos = () => {
       },
       title: t("events"),
       info: <>{<EventContent /> }</>,
+    },
+    {
+      title: t("gallery"),
+      customSection: <Gallery images={exampleImages} />,
     },
   ];
   return infos;

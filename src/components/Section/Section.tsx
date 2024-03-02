@@ -23,19 +23,23 @@ const SectionPrincipal = () => {
     const isEven = index % 2 === 0;
     return (
       <Section.Container id={section.title} key={section.title}>
-        <Section.Image src={section.image.url} alt={section.image.alt} />
-        <Section.Content variant={isEven ? "black" : "brand"}>
-          <Section.Title>{section.title}</Section.Title>
-          <div className="pt-5">
-            <LineSection className={`w-[157px] h-[1px] text-${isEven ? "white" : "black"}`} />
-          </div>
-          <Section.ContainerContent>
-            <Section.Info>{section.info}</Section.Info>
-          </Section.ContainerContent>
-          {shouldSquareAppear && (
-            <ReactangleSection className={` absolute bottom-10 -right-5 z-10 w-[118px] h-[158px] text-${isEven ? "brand" : "black"}`} />
-          )}
-        </Section.Content>
+        {!section.customSection ? (
+          <>
+            <Section.Image src={section.image.url} alt={section.image.alt} />
+            <Section.Content variant={isEven ? "black" : "brand"}>
+              <Section.Title>{section.title}</Section.Title>
+              <div className="pt-5">
+                <LineSection className={`w-[157px] h-[1px] text-${isEven ? "white" : "black"}`}/>
+              </div>
+              <Section.ContainerContent>
+                <Section.Info>{section.info}</Section.Info>
+              </Section.ContainerContent>
+              {shouldSquareAppear && (
+                <ReactangleSection className={` absolute bottom-10 -right-5 z-10 w-[118px] h-[158px] text-${isEven ? "brand" : "black"}`}/>
+              )}
+            </Section.Content>
+          </>
+        ) : (section.customSection)}
       </Section.Container>
     );
   });
