@@ -20,7 +20,8 @@
     "next-i18next": "^15.2.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-i18next": "^14.0.5"
+    "react-i18next": "^14.0.5",
+    "react-icons": "^5.0.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
