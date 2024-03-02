@@ -1,6 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -152,6 +152,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://www.cleisoncarlos.com"><img src="https://avatars.githubusercontent.com/u/5004792?v=4?s=100" width="100px;" alt="Cleison Carlos"/><br /><sub><b>Cleison Carlos</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=cleisoncarlos" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/ruan-valente"><img src="https://avatars.githubusercontent.com/u/6674232?v=4?s=100" width="100px;" alt="Ruan Valente"/><br /><sub><b>Ruan Valente</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ruanvalente" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://kedgard-cordero.netlify.app"><img src="https://avatars.githubusercontent.com/u/97119018?v=4?s=100" width="100px;" alt="Kedgard Cordero"/><br /><sub><b>Kedgard Cordero</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=Kenny4297" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.linkedin.com/in/luizamarlene"><img src="https://avatars.githubusercontent.com/u/84198233?v=4?s=100" width="100px;" alt="Luiza Marlene"/><br /><sub><b>Luiza Marlene</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=tuiza" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
