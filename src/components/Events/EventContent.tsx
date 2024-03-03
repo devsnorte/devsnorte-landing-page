@@ -19,10 +19,10 @@ export function EventContent() {
         <div>
             <div className="flex justify-center mb-4">
                 <button onClick={() => toggleEventType()} className={`px-4 py-2 mx-2 text-sm font-medium text-black ${eventType === "future" ? "bg-green-300" : "bg-green-200 hover:bg-green-300"}`}>
-                    {t("available")}
+                    {isClient && t("available")}
                 </button>
                 <button onClick={() => toggleEventType()} className={`px-4 py-2 mx-2 text-sm font-medium text-black ${eventType === "past" ? "bg-green-300" : "bg-green-200 hover:bg-green-300"}`}>
-                    {t("closed")}
+                    {isClient && t("closed")}
                 </button>
             </div>
             {isClient && (events.length === 0 ? <p>{t("noEvents")}</p> : <EventList events={events} />)}
