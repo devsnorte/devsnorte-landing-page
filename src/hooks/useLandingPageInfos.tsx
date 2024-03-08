@@ -60,6 +60,9 @@ export const useLandingPageInfos = () => {
                     <li>
                         Amazonia Online: <Link href="https://amazoniaonline.com.br/">https://amazoniaonline.com.br/</Link>
                     </li>
+                    <li>
+                        Iidopterlabs: <Link href="https://www.idopterlabs.com.br/">https://www.idopterlabs.com.br/</Link>
+                    </li>
                 </ul>
             ),
         },
