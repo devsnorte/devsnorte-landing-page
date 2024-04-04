@@ -78,6 +78,7 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
+      <script defer data-domain="devsnorte.com" src="https://devsnorte-plausible.fly.dev/js/script.js"></script>
     </Html>
   );
 }
