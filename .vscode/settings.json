@@ -5,5 +5,8 @@
   "workbench.colorCustomizations": {
     "statusBar.background": "#5ED29E",
     "statusBar.foreground": "#000000"
-  }
+  },
+  "i18n-ally.localesPaths": [
+    "public/locales"
+  ]
 }
