@@ -35,9 +35,9 @@ const SectionPrincipal = () => {
             <Section.Image src={section.image.url} alt={section.image.alt} />
             <Section.Content variant={isEven ? 'black' : 'brand'}>
               <Section.Title>{section.title}</Section.Title>
-              <div className='pt-5'>
+              <div className='pt-4 pb-2'>
                 <LineSection
-                  className={`w-[157px] h-[1px] text-${
+                  className={`w-[157px] h-[1px] text-black dark:text-${
                     isEven ? 'white' : 'black'
                   }`}
                 />

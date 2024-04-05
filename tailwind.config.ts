@@ -1,21 +1,26 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
+  ],
+  darkMode: 'class',
   theme: {
     extend: {
       screens: {
-        slg: "1200px",
+        slg: '1200px'
       },
       fontFamily: {
-        poppins: "var(--font-poppins)",
+        poppins: 'var(--font-poppins)'
       },
       colors: {
-        brand: "#5ED29E",
+        brand: '#5ED29E'
       },
-      maxWidth: {},
-    },
+      maxWidth: {}
+    }
   },
-  plugins: [],
-};
-export default config;
+  plugins: []
+}
+export default config
