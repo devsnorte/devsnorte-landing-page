@@ -22,11 +22,11 @@
 }
 
 .body {
-  @apply max-lg:ml-[-2rem] p-1.5 mt-2.5 absolute top-full flex flex-col animate-[opacity_0.6s_ease-in-out];
+  @apply p-1.5 mt-2.5 absolute top-full flex flex-col animate-[opacity_0.6s_ease-in-out];
 }
 
 .dropdownItem {
-  @apply p-2.5 text-black border-b-black border-b last-of-type:border-b-0 cursor-pointer;
+  @apply p-2.5 text-black border-b-black border-b last-of-type:border-b-0 cursor-pointer min-w-40;
 }
 
 .icon {
