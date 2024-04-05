@@ -104,7 +104,7 @@ const Gallery: FC<GalleryProps> = ({ images }) => {
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
-            className='fixed top-0 left-0 flex items-center justify-center w-full h-screen bg-[#0008] backdrop-blur-md'
+            className='fixed top-0 left-0 flex items-center justify-center w-full h-screen bg-[#0008] backdrop-blur-md px-4'
             onClick={closeModal}
             exit={{ opacity: 0, scale: 0.8, backgroundColor: 'transparent' }}
           >

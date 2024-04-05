@@ -43,16 +43,26 @@ const Header = ({ className = '', ...rest }: HeaderProps) => {
         type='image/svg'
         sizes='32x32'
       />
-      <div className='flex justify-between w-full h-16 max-w-screen-lg pt-10'>
-        <Link href='/'>
+      <div className='flex items-center justify-between w-full h-16 max-w-screen-lg pt-10'>
+        <Link href='/' className='block h-16'>
           <div className='hover:pointer'></div>
-          <Image
-            src='/icons/logo.svg'
-            width={188}
-            height={60}
-            alt='devs norte logo'
-            className='w-full xl:w-44'
-          />
+          {theme === 'dark' ? (
+            <Image
+              src='/icons/logo.svg'
+              width={188}
+              height={60}
+              alt='devs norte logo'
+              className='w-full xl:w-44'
+            />
+          ) : (
+            <Image
+              src='/icons/logo-light.svg'
+              width={188}
+              height={60}
+              alt='devs norte logo'
+              className='w-full xl:w-44'
+            />
+          )}
         </Link>
 
         <div className='flex gap-[10px] items-center'>
@@ -78,7 +88,7 @@ const Header = ({ className = '', ...rest }: HeaderProps) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='bg-black fixed top-0 left-0 w-full h-screen z-50'
+              className='bg-white dark:bg-black fixed top-0 left-0 w-full h-screen z-50'
             >
               <motion.div
                 initial={{ scale: 0.8 }}
@@ -112,6 +122,13 @@ const Header = ({ className = '', ...rest }: HeaderProps) => {
                   style={{ pointerEvents: menuOpen ? 'auto' : 'none' }}
                   className='flex flex-col justify-center gap-5 h-screen w-full relative'
                 >
+                  <div
+                    className='cursor-pointer w-9 h-9 z-50 ml-auto'
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <IoIosCloseCircleOutline className='text-black dark:text-white text-4xl' />
+                  </div>
+
                   <Dropdown
                     placeholder={<Translate className='w-6 h-6' />}
                     onSelect={(value) => onSelectLanguage(value as string)}
@@ -145,18 +162,11 @@ const Header = ({ className = '', ...rest }: HeaderProps) => {
                         setMenuOpen(false)
                         scrollToSection(section.title)
                       }}
-                      className='text-white text-2xl'
+                      className='cursor-pointer text-black dark:text-white text-2xl'
                     >
                       {section.title}
                     </motion.li>
                   ))}
-
-                  <div
-                    className='cursor-pointer w-9 h-9 z-50 ml-auto'
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <IoIosCloseCircleOutline className='dark:text-white text-4xl' />
-                  </div>
                 </motion.ul>
               </motion.div>
             </motion.div>
