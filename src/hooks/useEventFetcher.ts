@@ -17,10 +17,10 @@ export const useEventFetcher = (initialEventType: 'future' | 'past' = 'future') 
                         service: type === 'future' ? "/v4/search" : "/v4/events/past",
                         params: {
                             only: "name,images,location,start_date_formats,end_date_formats,url",
-                            organizer_id: 5478152,
+                            organizer_id: [3125215, 5478152],
                             sort: "date",
                             order_by: "desc",
-                            limit: "3",
+                            limit: "6",
                             page: 1,
                         },
                         ignoreLocation: true,

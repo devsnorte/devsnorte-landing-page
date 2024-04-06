@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const { i18n } = require('./next-i18next.config')
 module.exports = {
-    i18n,
-    webpack(config){
-      const fileLoaderRule = config.module.rules.find((rule) =>
+  i18n,
+  webpack (config) {
+    const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg'),
     )
-  
+
     config.module.rules.push(
       // Reapply the existing rule, but only for svg imports ending in ?url
       {
@@ -22,11 +22,18 @@ module.exports = {
         use: ['@svgr/webpack'],
       },
     )
-  
-      // Modify the file loader rule to ignore *.svg, since we have it handled now.
-      fileLoaderRule.exclude = /\.svg$/i
-  
-      return config
-    }
-  }
 
+    // Modify the file loader rule to ignore *.svg, since we have it handled now.
+    fileLoaderRule.exclude = /\.svg$/i
+
+    return config
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.sympla.com.br'
+      },
+    ],
+  },
+}
