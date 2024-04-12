@@ -92,12 +92,7 @@ O layout do site está disponível no Figma para visualização e contribuiçõe
 
 ## Contribuições
 
-Adoramos contribuições! Se você quiser contribuir para o projeto, siga estas etapas:
-
-1. Verifique as [issues abertas](https://github.com/devsnorte/devsnorte-landing-pageo/issues) para ver se há algo em que possa ajudar.
-2. Se encontrar uma issue que gostaria de resolver, comente nela para que possamos atribuí-la a você.
-3. Depois de receber a atribuição, faça um fork do repositório, faça suas alterações e envie um pull request.
-4. Certifique-se de descrever claramente suas alterações no pull request e vincule a issue correspondente.
+- Veja o [Contributing.md](https://github.com/devsnorte/devsnorte-landing-page/blob/main/CONTRIBUTING.md) para mais informações sobre como contribuir!
 
 ## Como Fazer Commit
 
