@@ -123,6 +123,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "patrickmonteiro",
+      "name": "Patrick Monteiro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13258255?v=4",
+      "profile": "https://www.youtube.com/c/PatrickMonteiroEng",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
