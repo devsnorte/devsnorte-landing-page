@@ -1,12 +1,5 @@
 'use client'
-import {
-  Container,
-  ContainerContent,
-  Content,
-  Image,
-  Info,
-  Title
-} from './index'
+import { Container, ContainerContent, Content, Image, Info, Title } from './index'
 import ReactangleSection from '/public/icons/rectangle-section.svg'
 import LineSection from '/public/icons/line-section.svg'
 import { useLandingPageInfos } from '@/hooks/useLandingPageInfos'
@@ -21,7 +14,7 @@ const Section = {
   ContainerContent
 }
 
-const SectionPrincipal = () => {
+export function SectionPrincipal() {
   const landingPageInfos = useLandingPageInfos()
   const { isCustomBreakpoint } = useBreakpoints()
   const shouldSquareAppear = isCustomBreakpoint(850)
@@ -32,26 +25,18 @@ const SectionPrincipal = () => {
       <Section.Container id={section.title} key={section.title}>
         {!section.customSection ? (
           <>
-            <Section.Image src={section.image.url} alt={section.image.alt} />
+            <Section.Image alt={section.image.alt} src={section.image.url} />
             <Section.Content variant={isEven ? 'black' : 'brand'}>
               <Section.Title>{section.title}</Section.Title>
               <div className='pt-4 pb-2'>
-                <LineSection
-                  className={`w-[157px] h-[1px] text-black dark:text-${
-                    isEven ? 'white' : 'black'
-                  }`}
-                />
+                <LineSection className={`w-[157px] h-[1px] text-black dark:text-${isEven ? 'white' : 'black'}`} />
               </div>
               <Section.ContainerContent>
                 <Section.Info>{section.info}</Section.Info>
               </Section.ContainerContent>
-              {shouldSquareAppear && (
-                <ReactangleSection
-                  className={` absolute bottom-10 -right-5 z-10 w-[118px] h-[158px] text-${
-                    isEven ? 'brand' : 'black'
-                  }`}
-                />
-              )}
+              {shouldSquareAppear ? (
+                <ReactangleSection className={` absolute bottom-10 -right-5 z-10 w-[118px] h-[158px] text-${isEven ? 'brand' : 'black'}`} />
+              ) : null}
             </Section.Content>
           </>
         ) : (
@@ -61,5 +46,3 @@ const SectionPrincipal = () => {
     )
   })
 }
-
-export default SectionPrincipal

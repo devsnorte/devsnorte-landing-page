@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  ReactNode,
-  useContext,
-  useState,
-  useEffect
-} from 'react'
+import React, { createContext, ReactNode, useContext, useState, useEffect } from 'react'
 
 type Theme = 'light' | 'dark'
 
@@ -24,7 +18,7 @@ const defaultContextValue: ThemeContextType = {
 
 export const ThemeContext = createContext<ThemeContextType>(defaultContextValue)
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>('light')
 
   useEffect(() => {
@@ -51,11 +45,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     setTheme(newTheme)
   }
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  )
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
 }
 
 export const useTheme = (): ThemeContextType => {

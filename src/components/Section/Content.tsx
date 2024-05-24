@@ -1,21 +1,12 @@
 'use client'
+import styles from './styles/Content.module.css'
+import { SectionContentProps } from '@/types/components/SectionTypes'
 
-import { SectionContentProps } from '@/types/section'
+const variantsClasses = {
+  brand: 'bg-brand text-[#000]',
+  black: 'bg-zinc-50 text-black dark:bg-[#000] dark:text-white'
+}
 
-export const Content = ({
-  variant = 'brand',
-  children
-}: SectionContentProps) => {
-  const variantsClasses = {
-    brand: 'bg-brand text-[#000]',
-    black: 'bg-zinc-50 text-black dark:bg-[#000] dark:text-white'
-  }
-
-  return (
-    <div
-      className={`p-5 h-[500px]  md:h-[430px] lg:h-[610px] xl:h-[835px] w-full flex flex-col items-start lg:px-48 justify-center relative ${variantsClasses[variant]}`}
-    >
-      <>{children}</>
-    </div>
-  )
+export function Content({ variant = 'brand', children }: SectionContentProps) {
+  return <div className={`${styles.contentWrapper} ${variantsClasses[variant]}`}>{children}</div>
 }

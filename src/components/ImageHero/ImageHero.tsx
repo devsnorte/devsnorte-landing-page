@@ -1,21 +1,17 @@
 import { useContext } from 'react'
-import css from './style.module.css'
+import styles from './style.module.css'
 import DevsNorte from '/public/icons/devsnorte-hero.svg'
 import DevsNorteLight from '/public/icons/devsnorte-hero-light.svg'
 import Star from '/public/icons/star.svg'
-import { ThemeContext } from '../ContextAPI/ThemeContext'
+import { ThemeContext } from '../../contexts/ThemeContext'
 
-const ImageHero = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext)
+function ImageHero() {
+  const { theme } = useContext(ThemeContext)
   return (
-    <div className='relative'>
-      {theme === 'dark' ? (
-        <DevsNorte className={css['devsnorte-svg']} />
-      ) : (
-        <DevsNorteLight className={css['devsnorte-svg']} />
-      )}
+    <div className="relative">
+      {theme === 'dark' ? <DevsNorte className={styles.devsnorteSvg} /> : <DevsNorteLight className={styles.devsnorteSvg} />}
 
-      <Star className={css.star} />
+      <Star className={styles.star} />
     </div>
   )
 }

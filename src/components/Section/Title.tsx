@@ -1,42 +1,16 @@
 'use client'
 
-import { TitleProps } from '@/types/section'
-import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
+import { TitleProps } from '@/types/components/SectionTypes'
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
+import styles from './styles/Title.module.css'
 
-export const Title = ({ children }: TitleProps) => {
+export function Title({ children }: TitleProps) {
   const textRef = useRef<HTMLHeadingElement>(null)
-  const triggerRef = useRef(null)
+  const isInView = useInView(textRef, { once: true, margin: '0px 100px -100px 0px' })
 
-  useEffect(() => {
-    const Trigger = gsap.fromTo(
-      textRef.current,
-      {
-        opacity: 0,
-        y: 50
-      },
-      {
-        duration: 1,
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: 'top center',
-          end: 'bottom center',
-          scrub: 1,
-          markers: false,
-          onUpdate: ({ progress }) => {
-            // console.log(progress);
-          }
-        }
-      }
-    )
-    return () => {
-      Trigger.kill()
-    }
-  }, [])
   return (
-    <h2 className='text-4xl md:text-6xl font-semibold' ref={textRef}>
+    <h2 className={`${styles.title} ${isInView && styles.show}`} ref={textRef}>
       {children}
     </h2>
   )

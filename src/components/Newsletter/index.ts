@@ -1,3 +1,1 @@
-import Newsletter from "./Newsletter";
-
-export default Newsletter
+export { Newsletter } from './Newsletter'

@@ -1,0 +1,7 @@
+.title {
+  @apply text-4xl md:text-6xl font-semibold -translate-y-36 opacity-0 transition-all duration-1000;
+}
+
+.show {
+  @apply translate-x-0 opacity-100;
+}

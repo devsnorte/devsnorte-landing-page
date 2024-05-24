@@ -1,12 +1,11 @@
 'use client'
 import gsap from 'gsap'
 import ImageHero from '../ImageHero'
-import Detail from './detail'
-import css from './style.module.css'
+import { Detail } from './Detail'
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'next-i18next'
 
-const Hero = () => {
+export function Hero() {
   const { t } = useTranslation()
   const textHeroSubtitleRef = useRef(null)
 
@@ -33,10 +32,7 @@ const Hero = () => {
     <div className='px-6'>
       <div className='mx-auto my-64 relative max-w-screen-md'>
         <ImageHero />
-        <p
-          className='mt-5 text-base md:text-3xl opacity-0'
-          ref={textHeroSubtitleRef}
-        >
+        <p className='mt-5 text-base md:text-3xl opacity-0' ref={textHeroSubtitleRef}>
           {t('heroSubtitle')}
         </p>
       </div>
@@ -44,5 +40,3 @@ const Hero = () => {
     </div>
   )
 }
-
-export default Hero

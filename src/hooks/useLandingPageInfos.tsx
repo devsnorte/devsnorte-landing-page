@@ -38,7 +38,7 @@ export const useLandingPageInfos = () => {
         alt: 'Eventos Sympla'
       },
       title: t('events'),
-      info: <>{<EventContent />}</>
+      info: <EventContent />
     },
     {
       image: {
@@ -50,33 +50,23 @@ export const useLandingPageInfos = () => {
         <ul>
           <li>
             Jetbrains:&nbsp;
-            <Link href='https://www.jetbrains.com/company/brand/'>
-              https://www.jetbrains.com/company/brand/
-            </Link>
+            <Link href='https://www.jetbrains.com/company/brand/'>https://www.jetbrains.com/company/brand/</Link>
           </li>
           <li>
             Faculdade Vincit:&nbsp;
-            <Link href='https://www.faculdadevincit.edu.br/'>
-              https://www.faculdadevincit.edu.br/
-            </Link>
+            <Link href='https://www.faculdadevincit.edu.br/'>https://www.faculdadevincit.edu.br/</Link>
           </li>
           <li>
             Fanhero:&nbsp;
-            <Link href='https://fanhero.com/pt-br/'>
-              https://fanhero.com/pt-br/
-            </Link>
+            <Link href='https://fanhero.com/pt-br/'>https://fanhero.com/pt-br/</Link>
           </li>
           <li>
             Amazonia Online:&nbsp;
-            <Link href='https://amazoniaonline.com.br/'>
-              https://amazoniaonline.com.br/
-            </Link>
+            <Link href='https://amazoniaonline.com.br/'>https://amazoniaonline.com.br/</Link>
           </li>
           <li>
             Iidopterlabs:&nbsp;
-            <Link href='https://www.idopterlabs.com.br/'>
-              https://www.idopterlabs.com.br/
-            </Link>
+            <Link href='https://www.idopterlabs.com.br/'>https://www.idopterlabs.com.br/</Link>
           </li>
         </ul>
       )

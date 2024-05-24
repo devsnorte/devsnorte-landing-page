@@ -4,6 +4,7 @@ import { Html, Main, Head, NextScript } from 'next/document'
 const seo = {
   title: 'Devs Norte',
   description:
+    // eslint-disable-next-line
     'Explore o universo da tecnologia conosco! Faça parte da maior comunidade de desenvolvedores do Norte do Brasil. Conecte-se, aprenda e colabore com profissionais apaixonados por inovação e desenvolvimento de software.',
   keywords: [
     'Desenvolvimento de Software',
@@ -28,8 +29,7 @@ const seo = {
     'Educação em Tecnologia'
   ],
   url: 'www.devsnorte.com.br',
-  urlImage:
-    'https://devsnorte.netlify.app/_ipx/w_828,q_75/%2Fimages%2Fnetworking.png?url=%2Fimages%2Fnetworking.png'
+  urlImage: 'https://devsnorte.netlify.app/_ipx/w_828,q_75/%2Fimages%2Fnetworking.png?url=%2Fimages%2Fnetworking.png'
 }
 
 export const metadata = {
@@ -72,60 +72,35 @@ export default function Document() {
     <Html>
       <Head>
         <title>{seo.title}</title>
-        <meta name='description' content={metadata.description} />
-        <meta name='keywords' content={metadata.keywords.join(', ')} />
-        <meta name='robots' content='index, follow' />
-        <link rel='shortcut icon' href='/favicon.ico' />
+        <meta content={metadata.description} name='description' />
+        <meta content={metadata.keywords.join(', ')} name='keywords' />
+        <meta content='index, follow' name='robots' />
+        <link href='/favicon.ico' rel='shortcut icon' />
 
         {/* Open Graph */}
-        <meta property='og:title' content={metadata.openGraph.title} />
-        <meta property='og:url' content={metadata.openGraph.url} />
-        <meta
-          property='og:description'
-          content={metadata.openGraph.description}
-        />
-        <meta property='og:type' content={metadata.openGraph.type} />
-        <meta property='og:image' content={metadata.openGraph.images[0].url} />
-        <meta
-          property='og:image:type'
-          content={metadata.openGraph.images[0].type}
-        />
-        <meta
-          property='og:image:width'
-          content={metadata.openGraph.images[0].width.toString()}
-        />
-        <meta
-          property='og:image:height'
-          content={metadata.openGraph.images[0].height.toString()}
-        />
-        <meta
-          property='og:image:alt'
-          content={metadata.openGraph.images[0].alt}
-        />
+        <meta content={metadata.openGraph.title} property='og:title' />
+        <meta content={metadata.openGraph.url} property='og:url' />
+        <meta content={metadata.openGraph.description} property='og:description' />
+        <meta content={metadata.openGraph.type} property='og:type' />
+        <meta content={metadata.openGraph.images[0].url} property='og:image' />
+        <meta content={metadata.openGraph.images[0].type} property='og:image:type' />
+        <meta content={metadata.openGraph.images[0].width.toString()} property='og:image:width' />
+        <meta content={metadata.openGraph.images[0].height.toString()} property='og:image:height' />
+        <meta content={metadata.openGraph.images[0].alt} property='og:image:alt' />
 
         {/* Twitter */}
-        <meta name='twitter:card' content={metadata.twitter.card} />
-        <meta name='twitter:title' content={metadata.twitter.title} />
-        <meta
-          name='twitter:description'
-          content={metadata.twitter.description}
-        />
-        <meta name='twitter:image' content={metadata.twitter.images[0].url} />
-        <meta
-          name='twitter:image:alt'
-          content={metadata.twitter.images[0].alt}
-        />
+        <meta content={metadata.twitter.card} name='twitter:card' />
+        <meta content={metadata.twitter.title} name='twitter:title' />
+        <meta content={metadata.twitter.description} name='twitter:description' />
+        <meta content={metadata.twitter.images[0].url} name='twitter:image' />
+        <meta content={metadata.twitter.images[0].alt} name='twitter:image:alt' />
       </Head>
 
       <body>
         <Main />
         <NextScript />
       </body>
-      <script
-        defer
-        data-domain='devsnorte.com'
-        src='https://devsnorte-plausible.fly.dev/js/script.js'
-      ></script>
+      <script data-domain='devsnorte.com' defer src='https://devsnorte-plausible.fly.dev/js/script.js' />
     </Html>
   )
 }
