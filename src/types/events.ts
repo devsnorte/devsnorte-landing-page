@@ -31,10 +31,4 @@ export interface EventLocation {
     };
     url: string;
   }
-   export interface EventCardProps {
-    event: Event;
-  }
-  export interface EventListProps {
-    events: Event[];
-  }
     

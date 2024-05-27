@@ -1,4 +1,7 @@
-import { EventCard } from './EventCard';
-import { EventList } from './EventLIst';
+import { EventCard } from "./EventCard";
+import { EventCarousel } from "./EventCarousel";
+import { DotButton } from "./CarouselDotButton";
+import { CarouselButton } from "./CarouselButtons";
+import { EventLoader } from "./EventLoader";
 
-export { EventCard, EventList };
+export { EventCard, EventCarousel, DotButton, CarouselButton, EventLoader };

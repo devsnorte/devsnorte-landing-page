@@ -37,7 +37,7 @@ export const Info = ({ children }: TextProps) => {
   }, []);
 
   return (
-    <div className="mt-2 font-poppins" ref={textRef}>
+    <div className="mt-2 font-poppins w-full" ref={textRef}>
       {children}
     </div>
   );
