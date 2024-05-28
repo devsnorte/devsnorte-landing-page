@@ -8,11 +8,10 @@ import DotIcon from "/public/icons/dot.svg";
 interface IEventCarousel {
   options?: EmblaOptionsType;
   children: React.ReactNode;
-  isCarouselControls: boolean;
 }
 
 export const EventCarousel = (props: IEventCarousel) => {
-  const { options, children, isCarouselControls } = props;
+  const { options, children } = props;
   const [currentIndex, setCurrentIndex] = useState(options?.startIndex || 0);
   const [emblaRef, carousel] = embla(options);
 
@@ -44,52 +43,45 @@ export const EventCarousel = (props: IEventCarousel) => {
 
   return (
     <section className="flex flex-col gap-4 w-full items-center">
-      <div
-        className="w-full h-[300px] overflow-hidden"
-        ref={emblaRef}
-      >
+      <div className="w-full h-[300px] overflow-hidden" ref={emblaRef}>
         <div className="flex w-full">{children}</div>
       </div>
-      {isCarouselControls ? (
-        <div className="flex justify-between w-[70%]">
-          <CarouselButton
-            classname=""
-            disabled={currentIndex <= 0}
-            onClick={() => handleScrollTo(currentIndex - 1)}
-          >
-            <ArrowIcon className="w-8 bg-green-300 rounded-full" />
-          </CarouselButton>
+      <div className="flex justify-between w-full md:w-[70%]">
+        <CarouselButton
+          classname=""
+          disabled={currentIndex <= 0}
+          onClick={() => handleScrollTo(currentIndex - 1)}
+        >
+          <ArrowIcon className="w-8 bg-green-300 rounded-full" />
+        </CarouselButton>
 
-          <div className="flex gap-4">
-            {carousel?.slideNodes().map((_, index) => (
-              <DotButton
-                key={index}
-                onClick={() => handleScrollTo(index)}
-                classname=""
-              >
-                <DotIcon
-                  className={` ${
-                    currentIndex === index
-                      ? "border-white text-white"
-                      : "border-green-300 text-green-300"
-                  } w-4 border-2 rounded-full 
+        <div className="flex gap-4">
+          {carousel?.slideNodes().map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => handleScrollTo(index)}
+              classname=""
+            >
+              <DotIcon
+                className={` ${
+                  currentIndex === index
+                    ? "border-white text-white"
+                    : "border-green-300 text-green-300"
+                } w-4 border-2 rounded-full 
              `}
-                />
-              </DotButton>
-            ))}
-          </div>
-
-          <CarouselButton
-            classname=""
-            disabled={disableNextButton}
-            onClick={() => handleScrollTo(currentIndex + 1)}
-          >
-            <ArrowIcon className="w-8 rotate-180 bg-green-300 rounded-full" />
-          </CarouselButton>
+              />
+            </DotButton>
+          ))}
         </div>
-      ) : (
-        ""
-      )}
+
+        <CarouselButton
+          classname=""
+          disabled={disableNextButton}
+          onClick={() => handleScrollTo(currentIndex + 1)}
+        >
+          <ArrowIcon className="w-8 rotate-180 bg-green-300 rounded-full" />
+        </CarouselButton>
+      </div>
     </section>
   );
 };
