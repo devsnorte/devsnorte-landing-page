@@ -1,6 +1,6 @@
 import embla from 'embla-carousel-react'
 import { EmblaOptionsType } from 'embla-carousel'
-import { CarouselButton } from './CarouselButtons'
+import { CarouselButton } from './CarouselButton'
 import { DotButton } from './CarouselDotButton'
 import { useEffect, useState } from 'react'
 import ArrowIcon from '/public/icons/arrow.svg'
