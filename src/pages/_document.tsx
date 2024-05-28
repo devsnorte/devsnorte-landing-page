@@ -1,11 +1,10 @@
-import { metadata, seo } from '@/contants/seo'
+import { metadata } from '@/contants/seo'
 import { Html, Main, Head, NextScript } from 'next/document'
 
 export default function Document() {
   return (
     <Html>
       <Head>
-        <title>{seo.title}</title>
         <meta content={metadata.description} name='description' />
         <meta content={metadata.keywords.join(', ')} name='keywords' />
         <meta content='index, follow' name='robots' />
