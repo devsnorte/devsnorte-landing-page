@@ -1,15 +1,13 @@
 interface IDotButton {
-  children?: React.ReactNode,
-  classname?: string | undefined,
+  children?: React.ReactNode
+  classname?: string | undefined
   onClick: () => void
 }
 
-export const DotButton = ({
-  children,
-  classname,
-  onClick
-}: IDotButton) => (
-  <button type="button" className={classname} onClick={onClick}>
-    {children}
-  </button>
-);
+export function DotButton({ children, classname, onClick }: IDotButton) {
+  return (
+    <button className={classname} onClick={onClick} type='button'>
+      {children}
+    </button>
+  )
+}
