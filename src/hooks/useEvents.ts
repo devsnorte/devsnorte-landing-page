@@ -1,13 +1,13 @@
-import { Event } from '@/types/events'
+import { Event } from '@/types/components/eventsTypes'
 
-export type EventType = 'future' | 'past';
+export type EventType = 'future' | 'past'
 
 export const useEvents = () => {
   async function getEvents(type: EventType): Promise<Event[] | undefined> {
     const { data } = await fetch('https://www.sympla.com.br/api/v1/search', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         service: type === 'future' ? '/v4/search' : '/v4/events/past',
@@ -17,10 +17,10 @@ export const useEvents = () => {
           sort: 'date',
           order_by: 'desc',
           limit: '6',
-          page: 1,
+          page: 1
         },
-        ignoreLocation: true,
-      }),
+        ignoreLocation: true
+      })
     }).then((response) => response.json())
 
     return data
