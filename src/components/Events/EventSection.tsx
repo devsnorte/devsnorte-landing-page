@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { EventCard, EventCarousel, EventLoader } from ".";
 import { useEffect, useState } from "react";
 import { Event } from "@/types/events";
-import { useBreakpoints } from "@/hooks/useBreakpoints";
 
 interface IEventsContent {
   events: Event[] | undefined;
@@ -15,20 +14,15 @@ interface IEventsContent {
 
 const EventContent = ({ events, isLoading, isClient }: IEventsContent) => {
   const { t } = useTranslation();
-  const { isCustomBreakpoint } = useBreakpoints();
-  const isMobile = !isCustomBreakpoint(768)
 
-  if (isLoading) return <EventLoader isClient={isClient}/>;
+  if (isLoading) return <EventLoader />;
 
   return (
     <div>
       {!events || events.length === 0 ? (
         <p>{isClient && t("noEvents")}</p>
       ) : (
-        <EventCarousel
-          isCarouselControls={isMobile}
-          options={{ startIndex: 0, dragFree: !isMobile }}
-        >
+        <EventCarousel options={{ startIndex: 0, dragFree: true }}>
           {events.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}
@@ -64,7 +58,7 @@ export function EventSection() {
   }, [eventType]);
 
   return (
-    <section className="flex flex-col w-full min-[768px]:w-[450px] min-[1080px]:w-[600px]  box-border">
+    <section className="flex flex-col w-full md:w-[400px] xl:w-[600px] min-[1800px]:w-[820px] box-border">
       <div className="flex justify-center mb-4 w-full">
         <button
           onClick={() => setEventType("future")}

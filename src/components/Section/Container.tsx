@@ -37,7 +37,7 @@ export const Container = ({ children, id }: SectionContainerProps) => {
   }, []);
 
   return (
-    <section id={id} ref={triggerRef} className=" w-full flex flex-col md:flex-row-reverse">
+    <section id={id} ref={triggerRef} className="w-full h-full flex flex-col md:flex-row-reverse">
       {children}
     </section>
   );
