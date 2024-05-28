@@ -132,6 +132,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "eduuardonogueira",
+      "name": "Eduardo Nogueira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88352978?v=4",
+      "profile": "https://www.linkedin.com/in/eduuardonogueira",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

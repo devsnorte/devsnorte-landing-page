@@ -1,6 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -150,6 +150,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://www.linkedin.com/in/luizamarlene"><img src="https://avatars.githubusercontent.com/u/84198233?v=4?s=100" width="100px;" alt="Luiza Marlene"/><br /><sub><b>Luiza Marlene</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=tuiza" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://lubien.dev"><img src="https://avatars.githubusercontent.com/u/9121359?v=4?s=100" width="100px;" alt="Lubien"/><br /><sub><b>Lubien</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3Alubien" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.youtube.com/c/PatrickMonteiroEng"><img src="https://avatars.githubusercontent.com/u/13258255?v=4?s=100" width="100px;" alt="Patrick Monteiro"/><br /><sub><b>Patrick Monteiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=patrickmonteiro" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/eduuardonogueira"><img src="https://avatars.githubusercontent.com/u/88352978?v=4?s=100" width="100px;" alt="Eduardo Nogueira"/><br /><sub><b>Eduardo Nogueira</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=eduuardonogueira" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Aeduuardonogueira" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
