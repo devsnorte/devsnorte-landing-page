@@ -1,6 +1,6 @@
 'use client'
 
-import { TitleProps } from '@/types/components/SectionTypes'
+import { TitleProps } from '@/types/components/sectionTypes'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 import styles from './styles/Title.module.css'

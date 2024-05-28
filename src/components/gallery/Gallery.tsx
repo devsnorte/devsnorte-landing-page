@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { GalleryProps } from '@/types/gallery'
+import { GalleryProps } from '@/types/components/galleryTypes'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 // import LineSection from '../../../public/icons/line-section.svg'
@@ -106,13 +106,7 @@ function Gallery({ images }: GalleryProps) {
               >
                 &times;
               </span>
-              <Image
-                alt='Modal Image'
-                className='w-full object-cover h-full aspect-[0.75/1] grow-0'
-                height={835}
-                src={imageGroups[currentGroup][currentImage]}
-                width={630}
-              />
+              <Image alt='Modal Image' className='w-full object-cover h-full aspect-[0.75/1] grow-0' height={835} src={imageGroups[currentGroup][currentImage]} width={630} />
               <div className='mt-5 flex justify-between'>
                 <button onClick={goToPreviousImage} type='button'>
                   Previous

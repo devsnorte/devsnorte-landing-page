@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Dropdown } from '../DropDown/Dropdown'
+import { Dropdown } from '@/components/dropdown/Dropdown'
 import { useRouter } from 'next/router'
 import Translate from '/public/icons/translate.svg'
 import { useLandingPageInfos } from '@/hooks/useLandingPageInfos'
@@ -45,9 +45,7 @@ export function Header() {
         </Link>
 
         <div className='flex gap-[10px] items-center'>
-          <div className='hover:cursor-pointer'>
-            {theme === 'light' ? <PiSunDim onClick={toggleTheme} size={30} /> : <PiMoonLight onClick={toggleTheme} size={30} />}
-          </div>
+          <div className='hover:cursor-pointer'>{theme === 'light' ? <PiSunDim onClick={toggleTheme} size={30} /> : <PiMoonLight onClick={toggleTheme} size={30} />}</div>
 
           <div className='cursor-pointer'>
             <CiMenuFries className='w-8 h-6' onClick={() => setMenuOpen(true)} />
@@ -56,12 +54,7 @@ export function Header() {
 
         <AnimatePresence>
           {menuOpen ? (
-            <motion.div
-              animate={{ opacity: 1 }}
-              className='bg-white dark:bg-black fixed top-0 left-0 w-full h-screen z-50'
-              exit={{ opacity: 0 }}
-              initial={{ opacity: 0 }}
-            >
+            <motion.div animate={{ opacity: 1 }} className='bg-white dark:bg-black fixed top-0 left-0 w-full h-screen z-50' exit={{ opacity: 0 }} initial={{ opacity: 0 }}>
               <motion.div animate={{ scale: 1 }} className='max-w-96 mx-auto p-4' exit={{ scale: 0.8 }} initial={{ scale: 0.8 }}>
                 <motion.ul
                   animate='open'

@@ -1,6 +1,6 @@
 'use client'
 
-import { SectionImageProps } from '@/types/components/SectionTypes'
+import { SectionImageProps } from '@/types/components/sectionTypes'
 import NextImage from 'next/image'
 import styles from './styles/Image.module.css'
 export function Image({ className, width = 768, height = 835, ...rest }: SectionImageProps) {

@@ -1,6 +1,6 @@
 'use client'
 
-import { SectionContainerProps } from '@/types/components/SectionTypes'
+import { SectionContainerProps } from '@/types/components/sectionTypes'
 
 export function Container({ children, id }: SectionContainerProps) {
   return (

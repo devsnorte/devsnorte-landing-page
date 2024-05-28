@@ -1,12 +1,12 @@
-import { EventListProps } from "@/types/events";
-import { EventCard } from "./EventCard";
+import { EventListProps } from '@/types/components/eventsTypes'
+import { EventCard } from './EventCard'
 
-export const EventList: React.FC<EventListProps> = ({ events }) => {
+export function EventList({ events }: EventListProps) {
   return (
-    <div className="flex flex-wrap gap-[5px]">
+    <div className='flex flex-wrap gap-[5px]'>
       {events.map((event, index) => (
-        <EventCard key={index} event={event} />
+        <EventCard event={event} key={index} />
       ))}
     </div>
-  );
-};
+  )
+}

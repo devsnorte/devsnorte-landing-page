@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import styles from './style.module.css'
+import styles from './styles/ImageHero.module.css'
 import DevsNorte from '/public/icons/devsnorte-hero.svg'
 import DevsNorteLight from '/public/icons/devsnorte-hero-light.svg'
 import Star from '/public/icons/star.svg'

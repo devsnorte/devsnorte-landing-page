@@ -1,6 +1,6 @@
 'use client'
 import styles from './styles/Content.module.css'
-import { SectionContentProps } from '@/types/components/SectionTypes'
+import { SectionContentProps } from '@/types/components/sectionTypes'
 
 const variantsClasses = {
   brand: 'bg-brand text-[#000]',

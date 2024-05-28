@@ -1,4 +1,4 @@
-import { Event } from '@/types/components/EventsTypes'
+import { Event } from '@/types/components/eventsTypes'
 export const mockEvents: Event[] = [
   {
     name: '#15 Meetup Devs Norte',

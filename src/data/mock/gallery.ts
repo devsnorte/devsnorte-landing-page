@@ -1,4 +1,4 @@
-import { ImageArray } from '@/types/components/GalleryTypes'
+import { ImageArray } from '@/types/components/galleryTypes'
 
 // Crie um array de imagens como dados de exemplo
 export const exampleImages: ImageArray = [

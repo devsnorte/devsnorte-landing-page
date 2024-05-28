@@ -27,7 +27,7 @@ Fiz alterações quanto a organização, criei uma pasta `contexts` e removi de 
 # Padrão para criação de arquivos de estilização
 
 Criei pastas chamadas `styles` dentro de cada pasta de componente, a criação dos arquivos de estilo variaram de acordo com a quantidade de tailwind que estava nos componentes, caso tivesse começado a ocupar mais de 1 linha, criei um arquivo para o css,
-o padrão para criação do nome foi de `COMPONENT_NAME.module.css` utlizando css modules
+o padrão para criação do nome foi de `ComponentName.module.css` utlizando css modules
 
 # Padrão de Arquivos não relacionados ao React
 

@@ -1,13 +1,8 @@
 'use client'
-import { ReactNode, useEffect, useRef, useState } from 'react'
-import styles from './Dropdown.module.css'
+import { useEffect, useRef, useState } from 'react'
+import styles from './styles/Dropdown.module.css'
 import Arrow from '/public/icons/arrow.svg'
-
-interface DropDownProps {
-  placeholder: ReactNode
-  data: { label: string; value: unknown }[]
-  onSelect: (_value: unknown) => void
-}
+import { DropDownProps } from '@/types/components/dropdownTypes'
 
 export function Dropdown({ data, onSelect, placeholder }: DropDownProps) {
   const [isOpen, setOpen] = useState(false)

@@ -1,6 +1,6 @@
 'use client'
 import gsap from 'gsap'
-import { ImageHero } from '../image_hero/ImageHero'
+import { ImageHero } from './ImageHero'
 import { Detail } from './Detail'
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'next-i18next'
