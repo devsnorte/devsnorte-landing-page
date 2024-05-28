@@ -1,4 +1,4 @@
-import { EventContent } from '@/components/events/EventContent'
+import { EventSection } from '@/components/events/EventSection'
 import { useTranslation } from 'next-i18next'
 import Gallery from '@/components/gallery/Gallery'
 import { exampleImages } from '@/data/mock/gallery'
@@ -38,7 +38,7 @@ export const useLandingPageInfos = () => {
         alt: 'Eventos Sympla'
       },
       title: t('events'),
-      info: <EventContent />
+      info: <EventSection />
     },
     {
       image: {
