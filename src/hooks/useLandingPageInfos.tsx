@@ -1,6 +1,6 @@
-import { EventContent } from '@/components/Events/EventContent'
+import { EventContent } from '@/components/events/EventContent'
 import { useTranslation } from 'next-i18next'
-import Gallery from '@/components/Gallery'
+import Gallery from '@/components/gallery/Gallery'
 import { exampleImages } from '@/data/mock/gallery'
 import Link from 'next/link'
 

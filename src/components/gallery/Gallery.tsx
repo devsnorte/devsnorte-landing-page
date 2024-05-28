@@ -3,7 +3,7 @@ import { GalleryProps } from '@/types/gallery'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 // import LineSection from '../../../public/icons/line-section.svg'
-import { Title } from '../Section'
+import { Title } from '../section'
 import { motion, AnimatePresence } from 'framer-motion'
 
 function Gallery({ images }: GalleryProps) {

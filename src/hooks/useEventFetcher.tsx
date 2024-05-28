@@ -1,4 +1,4 @@
-import { Event } from '@/types/components/EventsTypes'
+import { Event } from '@/types/components/eventsTypes'
 import { useEffect, useState } from 'react'
 
 export const useEventFetcher = (initialEventType: 'future' | 'past' = 'future') => {

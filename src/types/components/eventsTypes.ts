@@ -31,9 +31,11 @@ export interface Event {
   }
   url: string
 }
+
 export interface EventCardProps {
   event: Event
 }
+
 export interface EventListProps {
   events: Event[]
 }

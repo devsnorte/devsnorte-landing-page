@@ -1,7 +1,7 @@
-import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
+import { Header } from '@/components/header'
+import { Hero } from '@/components/hero'
 import { Newsletter } from '@/components/Newsletter'
-import { SectionPrincipal } from '@/components/Section/Section'
+import { SectionPrincipal } from '@/components/section/Section'
 import { NextPageContext } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
