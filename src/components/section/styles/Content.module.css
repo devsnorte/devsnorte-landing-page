@@ -1,0 +1,11 @@
+.contentWrapper {
+  @apply p-5 h-[500px]  md:h-[430px] lg:h-[610px] xl:h-[835px] w-full flex flex-col items-start lg:px-48 justify-center relative;
+}
+
+.brand {
+  @apply bg-brand text-[#000];
+}
+
+.contentWrapper.black {
+  @apply bg-zinc-50 text-black dark:bg-[#000] dark:text-white;
+}
