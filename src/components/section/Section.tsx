@@ -25,7 +25,7 @@ export function SectionPrincipal() {
       <Section.Container id={section.title} key={section.title}>
         {!section.customSection ? (
           <>
-            <Section.Image alt={section.image.alt} src={section.image.url} />
+            <Section.Image alt={section.image.alt} priority={false} src={section.image.url}/>
             <Section.Content variant={isEven ? 'black' : 'brand'}>
               <Section.Title>{section.title}</Section.Title>
               <div className='pt-4 pb-2'>
@@ -35,7 +35,7 @@ export function SectionPrincipal() {
                 <Section.Info>{section.info}</Section.Info>
               </Section.ContainerContent>
               {shouldSquareAppear ? (
-                <ReactangleSection className={` absolute bottom-10 -right-5 z-10 w-[118px] h-[158px] text-${isEven ? 'brand' : 'black'}`} />
+                <ReactangleSection className={`absolute bottom-10 -right-5 z-10 w-[118px] h-[158px] text-${isEven ? 'brand' : 'black'}`} />
               ) : null}
             </Section.Content>
           </>

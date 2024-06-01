@@ -79,7 +79,7 @@ function Gallery({ images }: GalleryProps) {
           <div className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-4 my-4' key={groupIndex}>
             {group.map((image, index) => (
               <div className='w-full overflow-hidden cursor-pointer' key={index} onClick={() => openModal(groupIndex, index)}>
-                <Image alt={`Gallery Image ${index + 1}`} height={600} layout='responsive' objectFit='cover' src={image} width={800} />
+                <Image alt={`Gallery Image ${index + 1}`} height={600} priority={false} src={image} width={800} />
               </div>
             ))}
           </div>
@@ -106,7 +106,14 @@ function Gallery({ images }: GalleryProps) {
               >
                 &times;
               </span>
-              <Image alt='Modal Image' className='w-full object-cover h-full aspect-[0.75/1] grow-0' height={835} src={imageGroups[currentGroup][currentImage]} width={630} />
+              <Image
+                alt='Modal Image'
+                className='w-full object-cover h-full aspect-[0.75/1] grow-0'
+                height={835}
+                priority={false}
+                src={imageGroups[currentGroup][currentImage]}
+                width={630}
+              />
               <div className='mt-5 flex justify-between'>
                 <button onClick={goToPreviousImage} type='button'>
                   Previous

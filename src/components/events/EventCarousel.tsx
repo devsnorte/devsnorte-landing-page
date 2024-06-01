@@ -46,13 +46,13 @@ export function EventCarousel({ options, children }: IEventCarousel) {
         <div className='flex w-full'>{children}</div>
       </div>
       <div className='flex justify-between w-full md:w-[70%]'>
-        <CarouselButton classname='' disabled={currentIndex <= 0} onClick={() => handleScrollTo(currentIndex - 1)}>
+        <CarouselButton disabled={currentIndex <= 0} onClick={() => handleScrollTo(currentIndex - 1)}>
           <ArrowIcon className='w-8 bg-green-300 rounded-full' />
         </CarouselButton>
 
         <div className='flex gap-4'>
           {carousel?.slideNodes().map((_, index) => (
-            <DotButton classname='' key={index} onClick={() => handleScrollTo(index)}>
+            <DotButton key={index} onClick={() => handleScrollTo(index)}>
               <DotIcon
                 className={` ${currentIndex === index ? 'border-white text-white' : 'border-green-300 text-green-300'} w-4 border-2 rounded-full 
              `}
@@ -61,7 +61,7 @@ export function EventCarousel({ options, children }: IEventCarousel) {
           ))}
         </div>
 
-        <CarouselButton classname='' disabled={disableNextButton} onClick={() => handleScrollTo(currentIndex + 1)}>
+        <CarouselButton disabled={disableNextButton} onClick={() => handleScrollTo(currentIndex + 1)}>
           <ArrowIcon className='w-8 rotate-180 bg-green-300 rounded-full' />
         </CarouselButton>
       </div>

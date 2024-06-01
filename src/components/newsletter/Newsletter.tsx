@@ -29,20 +29,17 @@ export function Newsletter() {
           className='w-full mb-2 sm:w-auto bg-neutral-800 px-4 py-2 placeholder-gray-500 
           focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-700'
           id='name'
-          placeholder={t('fullName')}
+          placeholder={isClient ? t('fullName') : ''}
           type='name'
         />
         <input
           className='w-full mb-2 sm:w-auto  bg-neutral-800 px-4 py-2 placeholder-gray-500 focus:outline-none focus:ring-2
         focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-700'
           id='email'
-          placeholder={t('email')}
+          placeholder={isClient ? t('email') : ''}
           type='email'
         />
-        <button
-          className='w-full mb-2 md:w-auto px-4 py-2 text-white bg-black dark:bg-gray-300  dark:text-gray-700 dark:hover:bg-gray-400'
-          type='submit'
-        >
+        <button className='w-full mb-2 md:w-auto px-4 py-2 min-w-max text-white bg-black dark:bg-gray-300 dark:text-gray-700 dark:hover:bg-gray-400' type='submit'>
           {isClient ? t('subscribe') : null}
         </button>
       </form>

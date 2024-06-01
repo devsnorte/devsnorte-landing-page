@@ -1,5 +1,5 @@
 .contentWrapper {
-  @apply p-5 h-[500px]  md:h-[430px] lg:h-[610px] xl:h-[835px] w-full flex flex-col items-start lg:px-48 justify-center relative;
+  @apply flex flex-col items-start py-36 px-5 md:p-10 w-full lg:px-48 lg:py-40 justify-center relative box-border;
 }
 
 .brand {
