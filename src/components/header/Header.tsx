@@ -35,7 +35,7 @@ export function Header() {
     <header className='flex flex-col items-center justify-center px-5'>
       <link href='/icons/favicon.svg' rel='icon' sizes='32x32' type='image/svg' />
       <div className='flex items-center justify-between w-full h-16 max-w-screen-lg pt-10'>
-        <Link className='block h-16' href='/'>
+        <Link className='block' href='/'>
           <div className='hover:pointer' />
           {theme === 'dark' ? (
             <Image alt='devs norte logo' className='w-full xl:w-44' height={60} src='/icons/logo.svg' width={188} />
