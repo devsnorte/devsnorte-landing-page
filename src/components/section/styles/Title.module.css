@@ -3,5 +3,5 @@
 }
 
 .show {
-  @apply translate-x-0 opacity-100;
+  @apply translate-y-0 opacity-100;
 }
