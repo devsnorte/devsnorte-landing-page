@@ -115,12 +115,20 @@ function Gallery({ images }: GalleryProps) {
                 width={630}
               />
               <div className='mt-5 flex justify-between'>
-                <button onClick={goToPreviousImage} type='button'>
-                  Previous
-                </button>
-                <button onClick={goToNextImage} type='button'>
-                  Next
-                </button>
+                {!(currentImage === 0 && currentGroup === 0) ? (
+                  <button onClick={goToPreviousImage} type='button'>
+                    Previous
+                  </button>
+                ) : (
+                  <div></div> // This div ensures the spacing remains consistent
+                )}
+                {!(currentImage === imageGroups[currentGroup].length - 1 && currentGroup === imageGroups.length - 1) ? (
+                  <button onClick={goToNextImage} type='button'>
+                    Next
+                  </button>
+                ) : (
+                  <div></div> // This div ensures the spacing remains consistent
+                )}
               </div>
             </motion.div>
           </motion.div>
