@@ -61,9 +61,9 @@ export function EventSection() {
 
   return (
     <section className='flex flex-col w-full md:w-[400px] xl:w-[600px] min-[1800px]:w-[820px] box-border'>
-      <div className='flex justify-center mb-4 w-full'>
+      <div className='flex justify-center md:justify-start mb-4 w-full'>
         <button
-          className={`px-4 py-2 mx-2 text-sm font-medium text-black ${eventType === 'future' ? 'bg-green-300' : 'bg-green-200 hover:bg-green-300'}`}
+          className={`px-4 py-2 mr-2 text-sm font-medium text-black ${eventType === 'future' ? 'bg-green-300' : 'bg-green-200 hover:bg-green-300'}`}
           onClick={() => setEventType('future')}
           type='button'
         >
