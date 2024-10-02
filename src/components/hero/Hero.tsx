@@ -32,6 +32,7 @@ export function Hero() {
     <div className='px-6'>
       <div className='mx-auto my-64 relative max-w-screen-md'>
         <ImageHero />
+  
         <p className='mt-5 text-base md:text-3xl opacity-0' ref={textHeroSubtitleRef}>
           {t('heroSubtitle')}
         </p>
