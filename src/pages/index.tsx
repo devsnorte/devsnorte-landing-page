@@ -1,6 +1,7 @@
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
 import { Newsletter } from '@/components/newsletter'
+import SocialLinks from '@/components/socialLinks'
 import { SectionPrincipal } from '@/components/section/Section'
 import { seo } from '@/contants/seo'
 import { NextPageContext } from 'next'
@@ -17,6 +18,8 @@ function Home() {
       <Hero />
       <SectionPrincipal />
       <Newsletter />
+      <SocialLinks />
+
     </div>
   )
 }
