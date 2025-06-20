@@ -7,6 +7,7 @@ import {
   FaTelegram,
   FaTwitter,
   FaYoutube
+
 } from 'react-icons/fa'
 
 import { RedeSocial } from '@/types/components/socialLinksTypes'
