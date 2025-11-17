@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --hostname 0.0.0.0",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "commit": "git-cz"
@@ -28,6 +28,7 @@
     "stringify": "^2.2.0"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "20.16.10",
     "@types/react": "18.3.10",
