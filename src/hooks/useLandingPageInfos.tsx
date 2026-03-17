@@ -83,6 +83,28 @@ export const useLandingPageInfos = () => {
       )
     },
     {
+      image: {
+        url: '/images/networking.png',
+        alt: t('vitrine_title')
+      },
+      title: t('vitrine_title'),
+      info: (
+        <div className='flex flex-col items-start gap-4'>
+          <p>{t('vitrine_description')}</p>
+          <div>
+            <Link
+              className='inline-block px-6 py-2 text-white bg-black hover:bg-gray-800 font-bold transition-colors'
+              href='https://comunidade.devsnorte.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              {t('vitrine_button')}
+            </Link>
+          </div>
+        </div>
+      )
+    },
+    {
       title: t('gallery'),
       customSection: <Gallery images={exampleImages} />
     }
