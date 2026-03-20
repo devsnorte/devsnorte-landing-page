@@ -114,7 +114,7 @@ Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entend
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.gitshowcase.com/ecsistem"><img src="https://avatars.githubusercontent.com/u/61160635?v=4?s=100" width="100px;" alt="Edson Costa"/><br /><sub><b>Edson Costa</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ecsistem" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://thayanacmamore.dev"><img src="https://avatars.githubusercontent.com/u/8525721?v=4?s=100" width="100px;" alt="Thayana Correa Mamore"/><br /><sub><b>Thayana Correa Mamore</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3Athauska" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://thayanacmamore.dev"><img src="https://avatars.githubusercontent.com/u/8525721?v=4?s=100" width="100px;" alt="Thayana Correa Mamore"/><br /><sub><b>Thayana Correa Mamore</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3Athauska" title="Reviewed Pull Requests">👀</a> <a href="#infra-thauska" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     </tr>
   </tbody>
 </table>
