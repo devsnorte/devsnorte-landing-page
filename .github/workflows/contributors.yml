@@ -1,0 +1,96 @@
+name: Contributors
+on:
+  pull_request_target:
+    types:
+      - closed
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Checkout code 👋
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - name: Check and comment 👩🏾‍💻
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
+        with:
+          github-token: ${{ secrets.GH_PAT }}
+          script: |
+            const fs = require('fs');
+            const { repo: { owner, repo } } = context;
+            const pr = context.payload.pull_request;
+
+            if (pr.user.id === 2492783 || pr.user.type === "Bot") {
+              console.log('No credit for maintainer/bot, stop processing');
+              return;
+            }
+
+            const response = await github.rest.pulls.listFiles({
+              owner, repo,
+              pull_number: pr.number
+            });
+
+            if (response.status !== 200) {
+              console.log('Could not fetch files');
+              return;
+            }
+
+            var addContribution = function(arr, name, path, contribution) {
+              if (arr.indexOf(contribution) != -1) {
+                return
+              }
+              if (name.includes(path)) {
+                arr.push(contribution)
+              }
+            };
+
+            var contributions = [];
+            for (const file of response.data) {
+              const name = file.filename;
+              addContribution(contributions, name, 'tailwind.config', 'design');
+              addContribution(contributions, name, 'src/components/', 'code');
+              addContribution(contributions, name, 'src/pages/', 'code');
+              addContribution(contributions, name, 'src/hooks/', 'code');
+              addContribution(contributions, name, 'src/contexts/', 'code');
+              addContribution(contributions, name, 'src/types/', 'code');
+              addContribution(contributions, name, 'src/contants/', 'code');
+              addContribution(contributions, name, 'src/data/', 'code');
+              addContribution(contributions, name, '.github/', 'infra');
+              addContribution(contributions, name, 'fly.toml', 'infra');
+              addContribution(contributions, name, 'Dockerfile', 'infra');
+              addContribution(contributions, name, 'public/', 'doc');
+              addContribution(contributions, name, 'README.md', 'doc');
+              addContribution(contributions, name, 'CONTRIBUTING.md', 'doc');
+              addContribution(contributions, name, 'CODE_OF_CONDUCT.md', 'doc');
+            }
+
+            if (contributions.length === 0) {
+              console.log('No relevant contributions found');
+              return;
+            }
+
+            var data = fs.readFileSync('.all-contributorsrc', 'utf8');
+            let json = JSON.parse(data);
+            const contributor = json.contributors.find(contributor => contributor.login === pr.user.login);
+            if (contributor) {
+              console.log(contributor);
+              contributions = contributions.filter(contribution => !contributor.contributions.includes(contribution));
+            }
+
+            if (contributions.length === 0) {
+              console.log('No new contributions found');
+              return;
+            }
+
+            var body = `@all-contributors please add @${pr.user.login} for ${contributions.join()}`;
+
+            if (!contributor) {
+              body += `\n\nThis is pure magic 🪄! @holopin-bot @${pr.user.login} wizard`;
+            }
+
+            console.log(`Adding comment: ${body}`);
+            await github.rest.issues.createComment({
+              owner, repo,
+              issue_number: pr.number,
+              body,
+            });
