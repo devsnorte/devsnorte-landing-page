@@ -1,20 +1,16 @@
 {
-  "files": [
-    "README.md"
-  ],
+  "files": ["README.md"],
   "imageSize": 100,
   "commit": false,
   "commitType": "docs",
   "commitConvention": "angular",
   "contributors": [
     {
-      "login": "ecsistem",
-      "name": "Edson Costa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
-      "profile": "https://www.gitshowcase.com/ecsistem",
-      "contributions": [
-        "code"
-      ]
+      "login": "DaywisonSilva",
+      "name": "Daywison Silva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54292958?v=4",
+      "profile": "https://www.linkedin.com/in/daywison-s-ab11b6121/",
+      "contributions": ["review", "code", "design"]
     },
     {
       "login": "thauska",
@@ -34,3 +30,4 @@
   "projectName": "devsnorte-landing-page",
   "projectOwner": "devsnorte"
 }
+

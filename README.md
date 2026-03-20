@@ -1,6 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -27,6 +27,31 @@ Este site foi desenvolvido utilizando o framework Next.js versão 14, uma podero
 
 O site está disponível para visualização em [devsnorte.netlify.app](https://devsnorte.netlify.app/).
 
+## O que é necessário antes da instalação
+
+Você precisa ter o Node.js e o NPM (Node Package Manager) instalados para rodar a aplicação.
+
+### Instalação Linux
+No terminal, rode os seguintes comandos: 
+```bash
+sudo apt update
+sudo apt install nodejs
+```
+
+### Instalação Windows
+Instale a versão mais recente no link a seguir:
+```bash
+https://nodejs.org/en/download/
+```
+Ele já instala o NPM junto com o Node.js.
+
+### Para verificar se a instalação deu certo, rode:
+```bash
+node --version
+npm --version
+```
+Devem aparecer as versões do Node.js e do npm na sua linha de comando.
+
 ## Como Instalar
 
 Para instalar e rodar o projeto localmente, siga estes passos:
@@ -34,13 +59,13 @@ Para instalar e rodar o projeto localmente, siga estes passos:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/suaconta/nome-do-repositorio.git
+git clone https://github.com/devsnorte/devsnorte-landing-page.git
 ```
 
 2. Acesse o diretório do projeto:
 
 ```bash
-cd nome-do-repositorio
+cd devsnorte-landing-page
 ```
 
 3. Instale as dependências:
@@ -67,12 +92,7 @@ O layout do site está disponível no Figma para visualização e contribuiçõe
 
 ## Contribuições
 
-Adoramos contribuições! Se você quiser contribuir para o projeto, siga estas etapas:
-
-1. Verifique as [issues abertas](https://github.com/suaconta/nome-do-repositorio/issues) para ver se há algo em que possa ajudar.
-2. Se encontrar uma issue que gostaria de resolver, comente nela para que possamos atribuí-la a você.
-3. Depois de receber a atribuição, faça um fork do repositório, faça suas alterações e envie um pull request.
-4. Certifique-se de descrever claramente suas alterações no pull request e vincule a issue correspondente.
+- Veja o [Contributing.md](https://github.com/devsnorte/devsnorte-landing-page/blob/main/CONTRIBUTING.md) para mais informações sobre como contribuir!
 
 ## Como Fazer Commit
 
@@ -107,6 +127,8 @@ Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entend
 
 ## Contribuidores ✨
 
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -124,20 +146,9 @@ Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entend
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
 ---
 <p align="center">
-Developed with ❤️
+Developed with ❤️ from community to community
 </p>
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

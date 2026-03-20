@@ -1,0 +1,110 @@
+name: Contributors
+on:
+  pull_request_target:
+    types:
+      - closed
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Checkout code 👋
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - name: Check and comment 👩🏾‍💻
+        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            const fs = require('fs');
+            const { repo: { owner, repo } } = context;
+            const pr = context.payload.pull_request;
+
+            if (pr.user.id === 2492783 || pr.user.type === "Bot" || pr.user.login === "holopin-bot") {
+              console.log('No credit for maintainer/bot, stop processing');
+              return;
+            }
+
+            const response = await github.rest.pulls.listFiles({
+              owner, repo,
+              pull_number: pr.number
+            });
+
+            if (response.status !== 200) {
+              console.log('Could not fetch files');
+              return;
+            }
+
+            var addContribution = function(set, name, path, contribution) {
+              if (name.includes(path)) {
+                set.add(contribution)
+              }
+            };
+
+            var contributions = new Set();
+            for (const file of response.data) {
+              const name = file.filename;
+              addContribution(contributions, name, 'tailwind.config', 'design');
+              addContribution(contributions, name, 'src/components/', 'code');
+              addContribution(contributions, name, 'src/pages/', 'code');
+              addContribution(contributions, name, 'src/hooks/', 'code');
+              addContribution(contributions, name, 'src/contexts/', 'code');
+              addContribution(contributions, name, 'src/types/', 'code');
+              addContribution(contributions, name, 'src/contants/', 'code');
+              addContribution(contributions, name, 'src/data/', 'code');
+              addContribution(contributions, name, 'next.config.js', 'code');
+              addContribution(contributions, name, 'tsconfig.json', 'code');
+              addContribution(contributions, name, 'package.json', 'code');
+              addContribution(contributions, name, '.github/', 'infra');
+              addContribution(contributions, name, 'fly.toml', 'infra');
+              addContribution(contributions, name, 'Dockerfile', 'infra');
+              addContribution(contributions, name, 'public/', 'doc');
+              addContribution(contributions, name, 'README.md', 'doc');
+              addContribution(contributions, name, 'CONTRIBUTING.md', 'doc');
+              addContribution(contributions, name, 'CODE_OF_CONDUCT.md', 'doc');
+            }
+
+            if (contributions.size === 0) {
+              console.log('No relevant contributions found');
+              return;
+            }
+
+            let json;
+            try {
+              var data = fs.readFileSync('.all-contributorsrc', 'utf8');
+              json = JSON.parse(data);
+            } catch (error) {
+              console.log('Could not read or parse .all-contributorsrc');
+              console.log(error.message);
+              return;
+            }
+            const contributor = json.contributors.find(contributor => contributor.login === pr.user.login);
+            if (contributor) {
+              console.log(contributor);
+              contributions = new Set(
+                [...contributions].filter(contribution => !contributor.contributions.includes(contribution))
+              );
+            }
+
+            if (contributions.size === 0) {
+              console.log('No new contributions found');
+              return;
+            }
+
+            var body = `@all-contributors please add @${pr.user.login} for ${[...contributions].join()}`;
+
+            if (!contributor) {
+              body += `\n\nThis is pure magic 🪄! @holopin-bot @${pr.user.login} wizard`;
+            }
+
+            console.log(`Adding comment: ${body}`);
+            await github.rest.issues.createComment({
+              owner, repo,
+              issue_number: pr.number,
+              body,
+            });
