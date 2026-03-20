@@ -152,6 +152,15 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "jhermesn",
+      "name": "Jorge Hermes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91022739?v=4",
+      "profile": "https://jhermesn.dev",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
