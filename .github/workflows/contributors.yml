@@ -4,6 +4,11 @@ on:
     types:
       - closed
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -14,13 +19,13 @@ jobs:
       - name: Check and comment 👩🏾‍💻
         uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
         with:
-          github-token: ${{ secrets.GH_PAT }}
+          github-token: ${{ github.token }}
           script: |
             const fs = require('fs');
             const { repo: { owner, repo } } = context;
             const pr = context.payload.pull_request;
 
-            if (pr.user.id === 2492783 || pr.user.type === "Bot") {
+            if (pr.user.id === 2492783 || pr.user.type === "Bot" || pr.user.login === "holopin-bot") {
               console.log('No credit for maintainer/bot, stop processing');
               return;
             }
@@ -35,16 +40,13 @@ jobs:
               return;
             }
 
-            var addContribution = function(arr, name, path, contribution) {
-              if (arr.indexOf(contribution) != -1) {
-                return
-              }
+            var addContribution = function(set, name, path, contribution) {
               if (name.includes(path)) {
-                arr.push(contribution)
+                set.add(contribution)
               }
             };
 
-            var contributions = [];
+            var contributions = new Set();
             for (const file of response.data) {
               const name = file.filename;
               addContribution(contributions, name, 'tailwind.config', 'design');
@@ -55,6 +57,9 @@ jobs:
               addContribution(contributions, name, 'src/types/', 'code');
               addContribution(contributions, name, 'src/contants/', 'code');
               addContribution(contributions, name, 'src/data/', 'code');
+              addContribution(contributions, name, 'next.config.js', 'code');
+              addContribution(contributions, name, 'tsconfig.json', 'code');
+              addContribution(contributions, name, 'package.json', 'code');
               addContribution(contributions, name, '.github/', 'infra');
               addContribution(contributions, name, 'fly.toml', 'infra');
               addContribution(contributions, name, 'Dockerfile', 'infra');
@@ -64,25 +69,34 @@ jobs:
               addContribution(contributions, name, 'CODE_OF_CONDUCT.md', 'doc');
             }
 
-            if (contributions.length === 0) {
+            if (contributions.size === 0) {
               console.log('No relevant contributions found');
               return;
             }
 
-            var data = fs.readFileSync('.all-contributorsrc', 'utf8');
-            let json = JSON.parse(data);
+            let json;
+            try {
+              var data = fs.readFileSync('.all-contributorsrc', 'utf8');
+              json = JSON.parse(data);
+            } catch (error) {
+              console.log('Could not read or parse .all-contributorsrc');
+              console.log(error.message);
+              return;
+            }
             const contributor = json.contributors.find(contributor => contributor.login === pr.user.login);
             if (contributor) {
               console.log(contributor);
-              contributions = contributions.filter(contribution => !contributor.contributions.includes(contribution));
+              contributions = new Set(
+                [...contributions].filter(contribution => !contributor.contributions.includes(contribution))
+              );
             }
 
-            if (contributions.length === 0) {
+            if (contributions.size === 0) {
               console.log('No new contributions found');
               return;
             }
 
-            var body = `@all-contributors please add @${pr.user.login} for ${contributions.join()}`;
+            var body = `@all-contributors please add @${pr.user.login} for ${[...contributions].join()}`;
 
             if (!contributor) {
               body += `\n\nThis is pure magic 🪄! @holopin-bot @${pr.user.login} wizard`;
