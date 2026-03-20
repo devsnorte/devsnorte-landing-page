@@ -17,105 +17,10 @@
       "name": "Thayana Correa Mamore",
       "avatar_url": "https://avatars.githubusercontent.com/u/8525721?v=4",
       "profile": "https://thayanacmamore.dev",
-      "contributions": ["review"]
-    },
-    {
-      "login": "iagocavalcante",
-      "name": "Iago Angelim Costa Cavalcante",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5131187?v=4",
-      "profile": "https://iagocavalcante.com/",
-      "contributions": ["review"]
-    },
-    {
-      "login": "suamirochadev",
-      "name": "Suami Rocha",
-      "avatar_url": "https://avatars.githubusercontent.com/u/110056279?v=4",
-      "profile": "https://bento.me/suamirochadev",
-      "contributions": ["code", "bug"]
-    },
-    {
-      "login": "ecsistem",
-      "name": "Edson Costa",
-      "avatar_url": "https://avatars.githubusercontent.com/u/61160635?v=4",
-      "profile": "https://www.gitshowcase.com/ecsistem",
-      "contributions": ["code", "bug", "doc"]
-    },
-    {
-      "login": "juanrtalmeida",
-      "name": "Juan Rodrigues Teixeira Almeida ",
-      "avatar_url": "https://avatars.githubusercontent.com/u/75220133?v=4",
-      "profile": "https://github.com/juanrtalmeida",
-      "contributions": ["code", "bug", "translation"]
-    },
-    {
-      "login": "ThiagoFigueiroRibeiro",
-      "name": "Thiago Figueiró Ribeiro",
-      "avatar_url": "https://avatars.githubusercontent.com/u/8943388?v=4",
-      "profile": "https://thiagofigueiroribeiro.github.io/",
-      "contributions": ["bug", "doc", "code"]
-    },
-    {
-      "login": "cleisoncarlos",
-      "name": "Cleison Carlos",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5004792?v=4",
-      "profile": "http://www.cleisoncarlos.com",
-      "contributions": ["code"]
-    },
-    {
-      "login": "ruanvalente",
-      "name": "Ruan Valente",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6674232?v=4",
-      "profile": "https://www.linkedin.com/in/ruan-valente",
-      "contributions": ["code"]
-    },
-    {
-      "login": "Kenny4297",
-      "name": "Kedgard Cordero",
-      "avatar_url": "https://avatars.githubusercontent.com/u/97119018?v=4",
-      "profile": "https://kedgard-cordero.netlify.app",
-      "contributions": ["code"]
-    },
-    {
-      "login": "tuiza",
-      "name": "Luiza Marlene",
-      "avatar_url": "https://avatars.githubusercontent.com/u/84198233?v=4",
-      "profile": "http://www.linkedin.com/in/luizamarlene",
-      "contributions": ["code"]
-    },
-    {
-      "login": "lubien",
-      "name": "Lubien",
-      "avatar_url": "https://avatars.githubusercontent.com/u/9121359?v=4",
-      "profile": "https://lubien.dev",
-      "contributions": ["review"]
-    },
-    {
-      "login": "patrickmonteiro",
-      "name": "Patrick Monteiro",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13258255?v=4",
-      "profile": "https://www.youtube.com/c/PatrickMonteiroEng",
-      "contributions": ["code"]
-    },
-    {
-      "login": "eduuardonogueira",
-      "name": "Eduardo Nogueira",
-      "avatar_url": "https://avatars.githubusercontent.com/u/88352978?v=4",
-      "profile": "https://www.linkedin.com/in/eduuardonogueira",
-      "contributions": ["code", "bug"]
-    },
-    {
-      "login": "saadman-galib",
-      "name": "Saadman Galib",
-      "avatar_url": "https://avatars.githubusercontent.com/u/73209315?v=4",
-      "profile": "https://saadmangalib.netlify.app/",
-      "contributions": ["code", "bug"]
-    },
-    {
-      "login": "jhermesn",
-      "name": "Jorge Hermes",
-      "avatar_url": "https://avatars.githubusercontent.com/u/91022739?v=4",
-      "profile": "https://jhermesn.dev/",
-      "contributions": ["code"]
+      "contributions": [
+        "review",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
