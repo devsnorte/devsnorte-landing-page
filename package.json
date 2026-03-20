@@ -34,6 +34,7 @@
     "@types/react": "18.3.10",
     "@types/react-dom": "^18",
     "@types/react-icons": "^3.0.0",
+    "all-contributors-cli": "^6.26.1",
     "autoprefixer": "^10.0.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",

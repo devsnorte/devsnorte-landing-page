@@ -1,6 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -154,6 +154,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://saadmangalib.netlify.app/"><img src="https://avatars.githubusercontent.com/u/73209315?v=4?s=100" width="100px;" alt="Saadman Galib"/><br /><sub><b>Saadman Galib</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=saadman-galib" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Asaadman-galib" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://jhermesn.dev/"><img src="https://avatars.githubusercontent.com/u/91022739?v=4?s=100" width="100px;" alt="Jorge Hermes"/><br /><sub><b>Jorge Hermes</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=jhermesn" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
