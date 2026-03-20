@@ -26,14 +26,14 @@ export function Newsletter() {
 
       <form className='sm:flex items-center sm:mx-auto gap-3 mt-4'>
         <input
-          className='w-full mb-2 sm:w-auto bg-neutral-800 px-4 py-2 placeholder-gray-500 
+          className='text-white w-full mb-2 sm:w-auto bg-neutral-800 px-4 py-2 placeholder-gray-500
           focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-700'
           id='name'
           placeholder={isClient ? t('fullName') : ''}
           type='name'
         />
         <input
-          className='w-full mb-2 sm:w-auto  bg-neutral-800 px-4 py-2 placeholder-gray-500 focus:outline-none focus:ring-2
+          className='text-white w-full mb-2 sm:w-auto  bg-neutral-800 px-4 py-2 placeholder-gray-500 focus:outline-none focus:ring-2
         focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-700'
           id='email'
           placeholder={isClient ? t('email') : ''}
