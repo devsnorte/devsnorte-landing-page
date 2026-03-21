@@ -14,6 +14,8 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   useEffect(() => {
     const root = document.documentElement
+    const themeColor = theme === 'dark' ? '#000000' : '#FAFAFA'
+
     if (theme === 'dark') {
       root.classList.add('dark')
       root.classList.remove('light')
@@ -21,6 +23,14 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
       root.classList.add('light')
       root.classList.remove('dark')
     }
+
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]')
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement('meta')
+      metaThemeColor.setAttribute('name', 'theme-color')
+      document.head.appendChild(metaThemeColor)
+    }
+    metaThemeColor.setAttribute('content', themeColor)
   }, [theme])
 
   useEffect(() => {
