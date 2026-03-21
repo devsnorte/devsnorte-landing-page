@@ -1,5 +1,7 @@
 {
-  "files": ["README.md"],
+  "files": [
+    "README.md"
+  ],
   "imageSize": 100,
   "commit": false,
   "commitType": "docs",
@@ -10,7 +12,11 @@
       "name": "Daywison Silva",
       "avatar_url": "https://avatars.githubusercontent.com/u/54292958?v=4",
       "profile": "https://www.linkedin.com/in/daywison-s-ab11b6121/",
-      "contributions": ["review", "code", "design"]
+      "contributions": [
+        "review",
+        "code",
+        "design"
+      ]
     },
     {
       "login": "thauska",
@@ -21,6 +27,15 @@
         "review",
         "infra"
       ]
+    },
+    {
+      "login": "thiagopinotti",
+      "name": "Thiago Pinotti Gama",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33077281?v=4",
+      "profile": "https://github.com/thiagopinotti",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -30,4 +45,3 @@
   "projectName": "devsnorte-landing-page",
   "projectOwner": "devsnorte"
 }
-
