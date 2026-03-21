@@ -1,6 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -135,8 +135,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.gitshowcase.com/ecsistem"><img src="https://avatars.githubusercontent.com/u/61160635?v=4?s=100" width="100px;" alt="Edson Costa"/><br /><sub><b>Edson Costa</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ecsistem" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/daywison-s-ab11b6121/"><img src="https://avatars.githubusercontent.com/u/54292958?v=4?s=100" width="100px;" alt="Daywison Silva"/><br /><sub><b>Daywison Silva</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3ADaywisonSilva" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=DaywisonSilva" title="Code">💻</a> <a href="#design-DaywisonSilva" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://thayanacmamore.dev"><img src="https://avatars.githubusercontent.com/u/8525721?v=4?s=100" width="100px;" alt="Thayana Correa Mamore"/><br /><sub><b>Thayana Correa Mamore</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3Athauska" title="Reviewed Pull Requests">👀</a> <a href="#infra-thauska" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thiagopinotti"><img src="https://avatars.githubusercontent.com/u/33077281?v=4?s=100" width="100px;" alt="Thiago Pinotti Gama"/><br /><sub><b>Thiago Pinotti Gama</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=thiagopinotti" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
