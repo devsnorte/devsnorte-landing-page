@@ -9,6 +9,7 @@ export default function Document() {
         <meta content={metadata.keywords.join(', ')} name='keywords' />
         <meta content='index, follow' name='robots' />
         <link href='/favicon.ico' rel='shortcut icon' />
+        <meta content='#FAFAFA' name='theme-color' />
 
         {/* Open Graph */}
         <meta content={metadata.openGraph.title} property='og:title' />
