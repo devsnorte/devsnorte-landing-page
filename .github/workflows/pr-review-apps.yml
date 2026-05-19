@@ -14,6 +14,11 @@ jobs:
     name: Review App
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: write
+
     concurrency:
       group: pr-${{ github.event.number }}
 
@@ -30,6 +35,35 @@ jobs:
         with:
           config: fly.review.toml
           region: gru
+
+      - name: Comment URL on PR
+        if: ${{ github.event.action != 'closed' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ steps.deploy.outputs.url }}';
+            const body = `🚀 **Review app deployed!**\n\n🔗 ${url}`;
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find(c => c.user.login === 'github-actions[bot]' && c.body.includes('Review app deployed'));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
 
       - name: Clean up GitHub environment
         uses: strumwolf/delete-deployment-environment@v3
