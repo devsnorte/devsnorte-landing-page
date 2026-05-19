@@ -1,0 +1,39 @@
+name: PR Review Apps
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+  FLY_REGION: gru
+  FLY_ORG: ${{ secrets.FLY_ORG }}
+
+jobs:
+  review_app:
+    name: Review App
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: pr-${{ github.event.number }}
+
+    environment:
+      name: pr-${{ github.event.number }}
+      url: ${{ steps.deploy.outputs.url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy review app
+        id: deploy
+        uses: superfly/fly-pr-review-apps@1.6.0
+        with:
+          config: fly.review.toml
+          region: gru
+
+      - name: Clean up GitHub environment
+        uses: strumwolf/delete-deployment-environment@v3
+        if: ${{ github.event.action == 'closed' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: pr-${{ github.event.number }}
