@@ -1,0 +1,75 @@
+# See https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
+
+name: Fly Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Deploy app
+    runs-on: ubuntu-latest
+    concurrency: deploy-group # optional: ensure only one action runs at a time
+    steps:
+      - uses: actions/checkout@v4
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - run: flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+  notify:
+    name: Notificar no Telegram
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+      - name: Notificar sucesso no deploy
+        if: needs.deploy.result == 'success'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-8)
+          COMMIT_TITLE=$(echo "$COMMIT_MSG" | head -n1)
+          MESSAGE=$(printf "✅ <b>Deploy realizado com sucesso!</b>\n\n🚀 <b>devsnorte-landing-page</b> está no ar!\n\n📝 Commit: <code>%s</code>\n💬 %s\n👤 Autor: ${{ github.actor }}\n🌿 Branch: <code>${{ github.ref_name }}</code>\n\n🔗 <a href=\"https://devsnorte.com\">Ver aplicação</a>\n📋 <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">Ver workflow</a>" "$SHORT_SHA" "$COMMIT_TITLE")
+
+          RESPONSE=$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n \
+              --argjson chat_id "${TELEGRAM_CHAT_ID}" \
+              --argjson thread_id "${TELEGRAM_THREAD_ID}" \
+              --arg text "${MESSAGE}" \
+              '{chat_id: $chat_id, message_thread_id: $thread_id, parse_mode: "HTML", disable_web_page_preview: true, text: $text}')")
+          echo "$RESPONSE"
+          if [ "$(echo "$RESPONSE" | jq -r '.ok')" != "true" ]; then
+            echo "Erro ao enviar mensagem no Telegram: $(echo "$RESPONSE" | jq -r '.description')"
+            exit 1
+          fi
+
+      - name: Notificar falha no deploy
+        if: needs.deploy.result == 'failure'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-8)
+          COMMIT_TITLE=$(echo "$COMMIT_MSG" | head -n1)
+          MESSAGE=$(printf "🔴 <b>Falha no deploy!</b>\n\nO deploy para o Fly.io falhou.\n\n📝 Commit: <code>%s</code>\n💬 %s\n👤 Autor: ${{ github.actor }}\n🌿 Branch: <code>${{ github.ref_name }}</code>\n\n📋 <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">Ver detalhes</a>" "$SHORT_SHA" "$COMMIT_TITLE")
+
+          RESPONSE=$(curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n \
+              --argjson chat_id "${TELEGRAM_CHAT_ID}" \
+              --argjson thread_id "${TELEGRAM_THREAD_ID}" \
+              --arg text "${MESSAGE}" \
+              '{chat_id: $chat_id, message_thread_id: $thread_id, parse_mode: "HTML", disable_web_page_preview: true, text: $text}')")
+          echo "$RESPONSE"
+          if [ "$(echo "$RESPONSE" | jq -r '.ok')" != "true" ]; then
+            echo "Erro ao enviar mensagem no Telegram: $(echo "$RESPONSE" | jq -r '.description')"
+            exit 1
+          fi

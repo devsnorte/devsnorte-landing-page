@@ -1,8 +1,9 @@
-import { EventContent } from '@/components/Events/EventContent'
+import { EventSection } from '@/components/events/EventSection'
 import { useTranslation } from 'next-i18next'
-import Gallery from '@/components/Gallery'
+import Gallery from '@/components/gallery/Gallery'
 import { exampleImages } from '@/data/mock/gallery'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const useLandingPageInfos = () => {
   const { t } = useTranslation()
@@ -38,7 +39,7 @@ export const useLandingPageInfos = () => {
         alt: 'Eventos Sympla'
       },
       title: t('events'),
-      info: <>{<EventContent />}</>
+      info: <EventSection />
     },
     {
       image: {
@@ -47,38 +48,60 @@ export const useLandingPageInfos = () => {
       },
       title: t('partnerships'),
       info: (
-        <ul>
-          <li>
-            Jetbrains:&nbsp;
+        <ul className='flex flex-wrap gap-2'>
+          <li className='flex items-center justify-center'>           
+            {/* Jetbrains:&nbsp; */}
             <Link href='https://www.jetbrains.com/company/brand/'>
-              https://www.jetbrains.com/company/brand/
+            <Image alt='Jetbrains' height={100} src='/images/logos/jetbrains.png' width={200}/>
             </Link>
           </li>
-          <li>
-            Faculdade Vincit:&nbsp;
+          <li className='flex items-center justify-center'>
+            {/* Faculdade Vincit:&nbsp; */}
             <Link href='https://www.faculdadevincit.edu.br/'>
-              https://www.faculdadevincit.edu.br/
+            <Image alt='Faculdade Vincit' height={100} src='/images/logos/faculdadevincint.png' width={200}/>
             </Link>
           </li>
-          <li>
-            Fanhero:&nbsp;
+          <li className='flex items-center justify-center'>
+            {/* Fanhero:&nbsp; */}
             <Link href='https://fanhero.com/pt-br/'>
-              https://fanhero.com/pt-br/
-            </Link>
+            <Image alt='Fanhero' height={100} src='/images/logos/fanhero.png' width={200}/></Link>
+
           </li>
-          <li>
-            Amazonia Online:&nbsp;
+          <li className='flex items-center justify-center'>
+            {/* Amazonia Online:&nbsp; */}
             <Link href='https://amazoniaonline.com.br/'>
-              https://amazoniaonline.com.br/
-            </Link>
+            <Image alt='Amazonia Oline' height={100} src='/images/logos/amazoniaonline.png' width={200}/></Link>
+
           </li>
-          <li>
-            Iidopterlabs:&nbsp;
+          <li className='flex items-center justify-center'>
+            {/* Iidopterlabs:&nbsp; */}
             <Link href='https://www.idopterlabs.com.br/'>
-              https://www.idopterlabs.com.br/
+            <Image alt='Iidopterlabs' height={100} src='/images/logos/idopterlabs.png' width={200}/>
             </Link>
           </li>
         </ul>
+      )
+    },
+    {
+      image: {
+        url: '/images/networking.png',
+        alt: t('vitrine_title')
+      },
+      title: t('vitrine_title'),
+      info: (
+        <div className='flex flex-col items-start gap-4'>
+          <p>{t('vitrine_description')}</p>
+          <div>
+            <Link
+              className='inline-block px-6 py-2 text-white bg-black hover:bg-gray-800 font-bold transition-colors'
+              href='https://comunidade.devsnorte.com/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              {t('vitrine_button')}
+            </Link>
+          </div>
+        </div>
       )
     },
     {

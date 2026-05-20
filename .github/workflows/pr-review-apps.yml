@@ -1,0 +1,73 @@
+name: PR Review Apps
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN_PR_PREVIEW }}
+  FLY_REGION: gru
+  FLY_ORG: ${{ secrets.FLY_ORG }}
+
+jobs:
+  review_app:
+    name: Review App
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: write
+
+    concurrency:
+      group: pr-${{ github.event.number }}
+
+    environment:
+      name: pr-${{ github.event.number }}
+      url: ${{ steps.deploy.outputs.url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy review app
+        id: deploy
+        uses: superfly/fly-pr-review-apps@1.6.0
+        with:
+          config: fly.review.toml
+          region: gru
+
+      - name: Comment URL on PR
+        if: ${{ github.event.action != 'closed' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ steps.deploy.outputs.url }}';
+            const body = `🚀 **Review app deployed!**\n\n🔗 ${url}`;
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find(c => c.user.login === 'github-actions[bot]' && c.body.includes('Review app deployed'));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
+
+      - name: Clean up GitHub environment
+        uses: strumwolf/delete-deployment-environment@v3
+        if: ${{ github.event.action == 'closed' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: pr-${{ github.event.number }}

@@ -1,0 +1,11 @@
+.contentWrapper {
+  @apply flex flex-col items-start py-36 px-5 md:p-10 w-full lg:px-48 lg:py-40 justify-center relative box-border;
+}
+
+.brand {
+  @apply bg-brand text-[#000];
+}
+
+.contentWrapper.black {
+  @apply bg-zinc-50 text-black dark:bg-[#000] dark:text-white;
+}

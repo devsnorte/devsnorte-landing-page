@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for devsnorte-landing-page-damp-waterfall-4609 on 2025-11-17T15:10:11-03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'devsnorte-landing-page-damp-waterfall-4609'
+primary_region = 'gru'
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
