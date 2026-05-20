@@ -123,7 +123,64 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/9121359?v=4",
       "profile": "https://lubien.dev",
       "contributions": [
-        "review"
+        "review",
+        "infra"
+      ]
+    },
+    {
+      "login": "patrickmonteiro",
+      "name": "Patrick Monteiro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13258255?v=4",
+      "profile": "https://www.youtube.com/c/PatrickMonteiroEng",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "eduuardonogueira",
+      "name": "Eduardo Nogueira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88352978?v=4",
+      "profile": "https://www.linkedin.com/in/eduuardonogueira",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "saadman-galib",
+      "name": "Saadman Galib",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73209315?v=4",
+      "profile": "https://saadmangalib.netlify.app/",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "jhermesn",
+      "name": "Jorge Hermes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91022739?v=4",
+      "profile": "https://jhermesn.dev/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "thiagopinotti",
+      "name": "Thiago Pinotti Gama",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33077281?v=4",
+      "profile": "https://github.com/thiagopinotti",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Viniciusrbr",
+      "name": "Vinicius Ribeiro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103283363?v=4",
+      "profile": "https://github.com/Viniciusrbr",
+      "contributions": [
+        "code"
       ]
     },
     {
