@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const { i18n } = require('./next-i18next.config')
 module.exports = {
+  output: 'standalone',
   i18n,
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'))
