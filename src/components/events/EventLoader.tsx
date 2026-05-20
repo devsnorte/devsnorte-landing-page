@@ -1,12 +1,12 @@
 'use client'
 
 import { useTranslation } from 'react-i18next'
-import LoadingIcon from '/public/icons/loading.svg'
+import LoadingIcon from '../../../public/icons/loading.svg'
 import { useEffect, useState } from 'react'
 
 export function EventLoader() {
   const { t } = useTranslation()
-  const [ isClient, setIsClient ] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => setIsClient(true), [])
 

@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import styles from './styles/Dropdown.module.css'
-import Arrow from '/public/icons/arrow.svg'
+import Arrow from '../../../public/icons/arrow.svg'
 import { DropDownProps } from '@/types/components/dropdownTypes'
 
 export function Dropdown({ data, onSelect, placeholder }: DropDownProps) {

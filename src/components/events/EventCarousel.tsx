@@ -3,8 +3,8 @@ import { EmblaOptionsType } from 'embla-carousel'
 import { CarouselButton } from './CarouselButton'
 import { DotButton } from './CarouselDotButton'
 import { useEffect, useState } from 'react'
-import ArrowIcon from '/public/icons/arrow.svg'
-import DotIcon from '/public/icons/dot.svg'
+import ArrowIcon from '../../../public/icons/arrow.svg'
+import DotIcon from '../../../public/icons/dot.svg'
 
 interface IEventCarousel {
   options?: EmblaOptionsType
@@ -54,7 +54,7 @@ export function EventCarousel({ options, children }: IEventCarousel) {
           {carousel?.slideNodes().map((_, index) => (
             <DotButton key={index} onClick={() => handleScrollTo(index)}>
               <DotIcon
-                className={` ${currentIndex === index ? 'border-white text-white' : 'border-green-300 text-green-300'} w-4 border-2 rounded-full 
+                className={` ${currentIndex === index ? 'border-white text-white' : 'border-green-300 text-green-300'} w-4 border-2 rounded-full
              `}
               />
             </DotButton>
