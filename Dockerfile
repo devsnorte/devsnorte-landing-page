@@ -28,21 +28,27 @@ RUN npm ci --include=dev
 COPY . .
 
 # Build application
-RUN npx next build --experimental-build-mode compile
-
-# Remove development dependencies
-RUN npm prune --omit=dev
+RUN npx next build
 
 
 # Final stage for app image
 FROM base
 
-# Copy built application
-COPY --from=build /app /app
+# Standalone output only needs the server, static assets, and public files
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
+COPY --from=build /app/public ./public
+
+# Copy the Fly.io entrypoint
+COPY --from=build /app/docker-entrypoint.js ./
+
+# Standalone server reads these to bind correctly
+ENV HOSTNAME="0.0.0.0"
+ENV PORT=3000
 
 # Entrypoint sets up the container.
 ENTRYPOINT [ "/app/docker-entrypoint.js" ]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD [ "npm", "run", "start" ]
+CMD [ "node", "server.js" ]

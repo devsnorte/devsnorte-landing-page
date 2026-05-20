@@ -1,7 +1,7 @@
 'use client'
 import { Container, ContainerContent, Content, Image, Info, Title } from './index'
-import ReactangleSection from '/public/icons/rectangle-section.svg'
-import LineSection from '/public/icons/line-section.svg'
+import ReactangleSection from '../../../public/icons/rectangle-section.svg'
+import LineSection from '../../../public/icons/line-section.svg'
 import { useLandingPageInfos } from '@/hooks/useLandingPageInfos'
 import { useBreakpoints } from '@/hooks/useBreakpoints'
 
@@ -25,7 +25,7 @@ export function SectionPrincipal() {
       <Section.Container id={section.title} key={section.title}>
         {!section.customSection ? (
           <>
-            <Section.Image alt={section.image.alt} priority={false} src={section.image.url}/>
+            <Section.Image alt={section.image.alt} priority={false} src={section.image.url} />
             <Section.Content variant={isEven ? 'black' : 'brand'}>
               <Section.Title>{section.title}</Section.Title>
               <div className='pt-4 pb-2'>
@@ -34,9 +34,7 @@ export function SectionPrincipal() {
               <Section.ContainerContent>
                 <Section.Info>{section.info}</Section.Info>
               </Section.ContainerContent>
-              {shouldSquareAppear ? (
-                <ReactangleSection className={`absolute bottom-10 -right-5 z-10 w-[118px] h-[158px] text-${isEven ? 'brand' : 'black'}`} />
-              ) : null}
+              {shouldSquareAppear ? <ReactangleSection className={`absolute bottom-10 -right-5 z-10 w-[118px] h-[158px] text-${isEven ? 'brand' : 'black'}`} /> : null}
             </Section.Content>
           </>
         ) : (
