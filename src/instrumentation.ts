@@ -6,6 +6,9 @@ export async function register() {
 
   const { NodeSDK } = await import('@opentelemetry/sdk-node')
   const { OTLPTraceExporter } = await import('@opentelemetry/exporter-trace-otlp-http')
+  const { OTLPMetricExporter } = await import('@opentelemetry/exporter-metrics-otlp-http')
+  const { PeriodicExportingMetricReader } = await import('@opentelemetry/sdk-metrics')
+  const { HostMetrics } = await import('@opentelemetry/host-metrics')
   const { resourceFromAttributes } = await import('@opentelemetry/resources')
   const { getNodeAutoInstrumentations } = await import('@opentelemetry/auto-instrumentations-node')
 
@@ -85,16 +88,28 @@ export async function register() {
     .filter((entry): entry is [string, string] => !!entry[1])
     .reduce<Record<string, string>>((acc, [k, v]) => ({ ...acc, [k]: v }), baseAttributes)
 
+  // Shared headers for both trace and metric exporters
+  const otlpHeaders: Record<string, string> = ingestionKey ? { 'signoz-ingestion-key': ingestionKey } : {}
+
   const traceExporter = new OTLPTraceExporter({
     url: `${endpoint}/v1/traces`,
-    headers: {
-      ...(ingestionKey ? { 'signoz-ingestion-key': ingestionKey } : {})
-    }
+    headers: otlpHeaders
+  })
+
+  const metricReader = new PeriodicExportingMetricReader({
+    // Export every 60 s — matches a sensible dashboard resolution without
+    // flooding the backend. Tune down to 15_000 if you want finer granularity.
+    exportIntervalMillis: 60_000,
+    exporter: new OTLPMetricExporter({
+      url: `${endpoint}/v1/metrics`,
+      headers: otlpHeaders
+    })
   })
 
   const sdk = new NodeSDK({
     resource: resourceFromAttributes(attributes),
     traceExporter,
+    metricReader,
     instrumentations: [
       getNodeAutoInstrumentations({
         // fs instrumentation is very noisy in Next.js — disable it
@@ -104,4 +119,8 @@ export async function register() {
   })
 
   sdk.start()
+
+  // HostMetrics reads from the OS after the SDK has registered the global
+  // MeterProvider. Collects: CPU, memory, network I/O, and filesystem usage.
+  new HostMetrics().start()
 }
