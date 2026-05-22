@@ -16,7 +16,9 @@ export async function register() {
   const ingestionKey = process.env.SIGNOZ_INGESTION_KEY
 
   if (!endpoint) {
-    console.warn('[otel] OTEL_EXPORTER_OTLP_ENDPOINT is not set — tracing disabled')
+    // Import lazily to keep the module graph clean at startup
+    const { default: logger } = await import('@/lib/logger')
+    logger.warn('OTEL_EXPORTER_OTLP_ENDPOINT is not set — tracing disabled')
     return
   }
 
