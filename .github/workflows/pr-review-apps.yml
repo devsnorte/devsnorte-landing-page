@@ -35,6 +35,7 @@ jobs:
         with:
           config: fly.review.toml
           region: gru
+          build-args: GIT_COMMIT=${{ github.sha }}
 
       - name: Comment URL on PR
         if: ${{ github.event.action != 'closed' }}

@@ -13,6 +13,11 @@ WORKDIR /app
 ENV NODE_ENV="production"
 
 
+# Git commit SHA baked in at build time via --build-arg GIT_COMMIT=<sha>.
+# Falls back to "local" for local builds / CI without the arg.
+# Available at runtime as process.env.RELEASE_COMMIT for OTel resource attributes.
+ARG GIT_COMMIT=local
+
 # Throw-away build stage to reduce size of final image
 FROM base AS build
 
@@ -45,6 +50,11 @@ COPY --from=build /app/docker-entrypoint.js ./
 # Standalone server reads these to bind correctly
 ENV HOSTNAME="0.0.0.0"
 ENV PORT=3000
+
+# Propagate the build-time git SHA into the runtime environment so OTel
+# can attach vcs.repository.ref.revision to every trace.
+ARG GIT_COMMIT=local
+ENV RELEASE_COMMIT=${GIT_COMMIT}
 
 # Entrypoint sets up the container.
 ENTRYPOINT [ "/app/docker-entrypoint.js" ]
