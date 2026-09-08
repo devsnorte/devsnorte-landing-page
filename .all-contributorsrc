@@ -41,7 +41,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/5131187?v=4",
       "profile": "https://iagocavalcante.com/",
       "contributions": [
-        "review"
+        "review",
+        "doc",
+        "code"
       ]
     },
     {
@@ -51,7 +53,7 @@
       "profile": "https://bento.me/suamirochadev",
       "contributions": [
         "code"
-      ] 
+      ]
     }
   ],
   "contributorsPerLine": 7,
