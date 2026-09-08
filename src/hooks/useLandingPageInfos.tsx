@@ -79,6 +79,12 @@ export const useLandingPageInfos = () => {
             <Image alt='Iidopterlabs' height={100} src='/images/logos/idopterlabs.png' width={200}/>
             </Link>
           </li>
+          <li className='flex flex-col items-center justify-center gap-1'>
+            <Link href='https://extcontabilidade.com.br/?coupon=DEVSNORTE' rel='noopener noreferrer' target='_blank'>
+            <Image alt='Ext. Contabilidade' height={100} src='/images/logos/extcontabilidade.png' width={200}/>
+            </Link>
+            <span className='text-sm text-center'>{t('extCoupon')}</span>
+          </li>
         </ul>
       )
     },
