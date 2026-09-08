@@ -1,0 +1,20 @@
+# fly.toml for PR review apps — lighter config than production
+# The app name is overridden automatically by the fly-pr-review-apps action
+
+app = 'placeholder'
+primary_region = 'gru'
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1

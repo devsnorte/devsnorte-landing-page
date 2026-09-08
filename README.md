@@ -1,6 +1,6 @@
 # Landing Page - Comunidade Devs Norte
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Logo da Comunidade Devs Norte](https://imgur.com/0OLFKkZ.png)
@@ -27,6 +27,31 @@ Este site foi desenvolvido utilizando o framework Next.js versão 14, uma podero
 
 O site está disponível para visualização em [devsnorte.netlify.app](https://devsnorte.netlify.app/).
 
+## O que é necessário antes da instalação
+
+Você precisa ter o Node.js e o NPM (Node Package Manager) instalados para rodar a aplicação.
+
+### Instalação Linux
+No terminal, rode os seguintes comandos: 
+```bash
+sudo apt update
+sudo apt install nodejs
+```
+
+### Instalação Windows
+Instale a versão mais recente no link a seguir:
+```bash
+https://nodejs.org/en/download/
+```
+Ele já instala o NPM junto com o Node.js.
+
+### Para verificar se a instalação deu certo, rode:
+```bash
+node --version
+npm --version
+```
+Devem aparecer as versões do Node.js e do npm na sua linha de comando.
+
 ## Como Instalar
 
 Para instalar e rodar o projeto localmente, siga estes passos:
@@ -34,13 +59,13 @@ Para instalar e rodar o projeto localmente, siga estes passos:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/suaconta/nome-do-repositorio.git
+git clone https://github.com/devsnorte/devsnorte-landing-page.git
 ```
 
 2. Acesse o diretório do projeto:
 
 ```bash
-cd nome-do-repositorio
+cd devsnorte-landing-page
 ```
 
 3. Instale as dependências:
@@ -67,12 +92,7 @@ O layout do site está disponível no Figma para visualização e contribuiçõe
 
 ## Contribuições
 
-Adoramos contribuições! Se você quiser contribuir para o projeto, siga estas etapas:
-
-1. Verifique as [issues abertas](https://github.com/suaconta/nome-do-repositorio/issues) para ver se há algo em que possa ajudar.
-2. Se encontrar uma issue que gostaria de resolver, comente nela para que possamos atribuí-la a você.
-3. Depois de receber a atribuição, faça um fork do repositório, faça suas alterações e envie um pull request.
-4. Certifique-se de descrever claramente suas alterações no pull request e vincule a issue correspondente.
+- Veja o [Contributing.md](https://github.com/devsnorte/devsnorte-landing-page/blob/main/CONTRIBUTING.md) para mais informações sobre como contribuir!
 
 ## Como Fazer Commit
 
@@ -107,6 +127,8 @@ Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entend
 
 ## Contribuidores ✨
 
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -118,6 +140,29 @@ Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entend
       <td align="center" valign="top" width="14.28%"><a href="https://www.gitshowcase.com/ecsistem"><img src="https://avatars.githubusercontent.com/u/61160635?v=4?s=100" width="100px;" alt="Edson Costa"/><br /><sub><b>Edson Costa</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ecsistem" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://iagocavalcante.com/"><img src="https://avatars.githubusercontent.com/u/5131187?v=4?s=100" width="100px;" alt="Iago Angelim Costa Cavalcante"/><br /><sub><b>Iago Angelim Costa Cavalcante</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3Aiagocavalcante" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=iagocavalcante" title="Documentation">📖</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=iagocavalcante" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://bento.me/suamirochadev"><img src="https://avatars.githubusercontent.com/u/110056279?v=4?s=100" width="100px;" alt="Suami Rocha"/><br /><sub><b>Suami Rocha</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=suamirochadev" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.gitshowcase.com/ecsistem"><img src="https://avatars.githubusercontent.com/u/61160635?v=4?s=100" width="100px;" alt="Edson Costa"/><br /><sub><b>Edson Costa</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ecsistem" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Aecsistem" title="Bug reports">🐛</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ecsistem" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/juanrtalmeida"><img src="https://avatars.githubusercontent.com/u/75220133?v=4?s=100" width="100px;" alt="Juan Rodrigues Teixeira Almeida "/><br /><sub><b>Juan Rodrigues Teixeira Almeida </b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=juanrtalmeida" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Ajuanrtalmeida" title="Bug reports">🐛</a> <a href="#translation-juanrtalmeida" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://thiagofigueiroribeiro.github.io/"><img src="https://avatars.githubusercontent.com/u/8943388?v=4?s=100" width="100px;" alt="Thiago Figueiró Ribeiro"/><br /><sub><b>Thiago Figueiró Ribeiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3AThiagoFigueiroRibeiro" title="Bug reports">🐛</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ThiagoFigueiroRibeiro" title="Documentation">📖</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ThiagoFigueiroRibeiro" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.cleisoncarlos.com"><img src="https://avatars.githubusercontent.com/u/5004792?v=4?s=100" width="100px;" alt="Cleison Carlos"/><br /><sub><b>Cleison Carlos</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=cleisoncarlos" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/ruan-valente"><img src="https://avatars.githubusercontent.com/u/6674232?v=4?s=100" width="100px;" alt="Ruan Valente"/><br /><sub><b>Ruan Valente</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=ruanvalente" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://kedgard-cordero.netlify.app"><img src="https://avatars.githubusercontent.com/u/97119018?v=4?s=100" width="100px;" alt="Kedgard Cordero"/><br /><sub><b>Kedgard Cordero</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=Kenny4297" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.linkedin.com/in/luizamarlene"><img src="https://avatars.githubusercontent.com/u/84198233?v=4?s=100" width="100px;" alt="Luiza Marlene"/><br /><sub><b>Luiza Marlene</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=tuiza" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://lubien.dev"><img src="https://avatars.githubusercontent.com/u/9121359?v=4?s=100" width="100px;" alt="Lubien"/><br /><sub><b>Lubien</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/pulls?q=is%3Apr+reviewed-by%3Alubien" title="Reviewed Pull Requests">👀</a> <a href="#infra-lubien" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=lubien" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.youtube.com/c/PatrickMonteiroEng"><img src="https://avatars.githubusercontent.com/u/13258255?v=4?s=100" width="100px;" alt="Patrick Monteiro"/><br /><sub><b>Patrick Monteiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=patrickmonteiro" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/eduuardonogueira"><img src="https://avatars.githubusercontent.com/u/88352978?v=4?s=100" width="100px;" alt="Eduardo Nogueira"/><br /><sub><b>Eduardo Nogueira</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=eduuardonogueira" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Aeduuardonogueira" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://saadmangalib.netlify.app/"><img src="https://avatars.githubusercontent.com/u/73209315?v=4?s=100" width="100px;" alt="Saadman Galib"/><br /><sub><b>Saadman Galib</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=saadman-galib" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Asaadman-galib" title="Bug reports">🐛</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://jhermesn.dev/"><img src="https://avatars.githubusercontent.com/u/91022739?v=4?s=100" width="100px;" alt="Jorge Hermes"/><br /><sub><b>Jorge Hermes</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=jhermesn" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thiagopinotti"><img src="https://avatars.githubusercontent.com/u/33077281?v=4?s=100" width="100px;" alt="Thiago Pinotti Gama"/><br /><sub><b>Thiago Pinotti Gama</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=thiagopinotti" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Viniciusrbr"><img src="https://avatars.githubusercontent.com/u/103283363?v=4?s=100" width="100px;" alt="Vinicius Ribeiro"/><br /><sub><b>Vinicius Ribeiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=Viniciusrbr" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.youtube.com/c/PatrickMonteiroEng"><img src="https://avatars.githubusercontent.com/u/13258255?v=4?s=100" width="100px;" alt="Patrick Monteiro"/><br /><sub><b>Patrick Monteiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=patrickmonteiro" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/eduuardonogueira"><img src="https://avatars.githubusercontent.com/u/88352978?v=4?s=100" width="100px;" alt="Eduardo Nogueira"/><br /><sub><b>Eduardo Nogueira</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=eduuardonogueira" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Aeduuardonogueira" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://saadmangalib.netlify.app/"><img src="https://avatars.githubusercontent.com/u/73209315?v=4?s=100" width="100px;" alt="Saadman Galib"/><br /><sub><b>Saadman Galib</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=saadman-galib" title="Code">💻</a> <a href="https://github.com/devsnorte/devsnorte-landing-page/issues?q=author%3Asaadman-galib" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thiagopinotti"><img src="https://avatars.githubusercontent.com/u/33077281?v=4?s=100" width="100px;" alt="Thiago Pinotti Gama"/><br /><sub><b>Thiago Pinotti Gama</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=thiagopinotti" title="Code">💻</a></td>
+      <td align="center" vlign="top" width="14.28%"><a href="https://github.com/Viniciusrbr"><img src="https://avatars.githubusercontent.com/u/103283363?v=4?s=100" width="100px;" alt="Vinicius Ribeiro"/><br /><sub><b>Vinicius Ribeiro</b></sub></a><br /><a href="https://github.com/devsnorte/devsnorte-landing-page/commits?author=Viniciusrbr" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
@@ -127,20 +172,9 @@ Por favor, consulte o nosso [Código de Conduta](CODE_OF_CONDUCT.md) para entend
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
 ---
 <p align="center">
-Developed with ❤️
+Developed with ❤️ from community to community
 </p>
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

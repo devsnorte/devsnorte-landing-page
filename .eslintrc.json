@@ -1,3 +1,100 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "react/destructuring-assignment": [
+      "error",
+      "always",
+      {
+        "destructureInSignature": "always"
+      }
+    ],
+    "react/jsx-no-leaked-render": [
+      "error",
+      {
+        "validStrategies": [
+          "ternary"
+        ]
+      }
+    ],
+    "react/jsx-max-depth": [
+      "error",
+      {
+        "max": 5
+      }
+    ],
+    "react/function-component-definition": [
+      "warn",
+      {
+        "namedComponents": "function-declaration"
+      }
+    ],
+    "react/self-closing-comp": "warn",
+    "react/jsx-sort-props": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "react/button-has-type": "error",
+    "react/jsx-boolean-value": 2,
+    "react/jsx-closing-bracket-location": [
+      1,
+      "line-aligned"
+    ],
+    "react/jsx-props-no-spreading": [
+      "warn"
+    ],
+    "no-var": "error",
+    "no-unreachable": "error",
+    "no-use-before-define": "error",
+    "dot-notation": "error",
+    "no-empty": "error",
+    "prefer-const": "error",
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "no-multi-spaces": "error",
+    "space-in-parens": "error",
+    "space-infix-ops": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 180
+      }
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ]
+  }
 }
