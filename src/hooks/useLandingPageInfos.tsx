@@ -56,22 +56,9 @@ export const useLandingPageInfos = () => {
             </Link>
           </li>
           <li className='flex items-center justify-center'>
-            {/* Faculdade Vincit:&nbsp; */}
-            <Link href='https://www.faculdadevincit.edu.br/'>
-            <Image alt='Faculdade Vincit' height={100} src='/images/logos/faculdadevincint.png' width={200}/>
+            <Link href='https://fly.io/' rel='noopener noreferrer' target='_blank'>
+            <Image alt='Fly.io' height={100} src='/images/logos/flyio.png' width={200}/>
             </Link>
-          </li>
-          <li className='flex items-center justify-center'>
-            {/* Fanhero:&nbsp; */}
-            <Link href='https://fanhero.com/pt-br/'>
-            <Image alt='Fanhero' height={100} src='/images/logos/fanhero.png' width={200}/></Link>
-
-          </li>
-          <li className='flex items-center justify-center'>
-            {/* Amazonia Online:&nbsp; */}
-            <Link href='https://amazoniaonline.com.br/'>
-            <Image alt='Amazonia Oline' height={100} src='/images/logos/amazoniaonline.png' width={200}/></Link>
-
           </li>
           <li className='flex items-center justify-center'>
             {/* Iidopterlabs:&nbsp; */}
