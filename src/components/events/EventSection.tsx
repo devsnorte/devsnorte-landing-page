@@ -78,7 +78,7 @@ export function EventSection() {
         </button>
       </div>
 
-      <EventContent events={events} isClient isLoading={isLoading} />
+      <EventContent events={events} isClient={isClient} isLoading={isLoading} />
     </section>
   )
 }

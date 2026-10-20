@@ -1,10 +1,10 @@
-import { Event } from '@/types/components/eventsTypes'
+import { EventCardProps } from '@/types/components/eventsTypes'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export function EventCard({ event }: { event: Event }) {
+export function EventCard({ event }: EventCardProps) {
   return (
-    <Link className='flex w-[256px] h-[300px] ml-2' href={event.url}>
+    <Link className='flex w-[256px] h-[300px] ml-2' href={event.url} rel='noopener noreferrer' target='_blank'>
       <article className='w-[256px] h-[300px] rounded-lg bg-white'>
         <div className='bg-cover bg-no-repeat'>
           <Image alt='Imagem do Evento' className='rounded-t-lg' height={600} priority={false} src={event.images.original} width={800} />
